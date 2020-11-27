@@ -1,0 +1,15 @@
+html {  //remを扱いやすくする
+    font-size: 62.5%;
+  }
+  
+  body {
+    font-family: $fonts;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  span {
+    display: inline-block;
+  }
