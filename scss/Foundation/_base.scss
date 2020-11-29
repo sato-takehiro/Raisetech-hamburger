@@ -3,7 +3,9 @@ html {  //remを扱いやすくする
   }
   
   body {
-    font-family: $fonts;
+    font-family: $font-default;
+    color: $font-color-defalut;
+    border-color: $border-color-defalut;
   }
   
   a {

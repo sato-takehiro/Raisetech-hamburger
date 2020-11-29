@@ -1,0 +1,9 @@
+.l-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $header-background-color;
+    height: $header-height;
+    padding-left: 51px;
+    padding-right: 24px;
+}

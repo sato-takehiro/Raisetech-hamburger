@@ -1,0 +1,19 @@
+.p-search {
+    height: 36px;
+    &__form {
+        height: inherit;
+        width: 311px;
+        margin-right: 11px;
+        border-radius: 10px;
+        align-items: center;
+        padding: 5px;
+    }
+
+    &__button {
+        height: inherit;
+        padding: 5px 40px;
+        border-radius: 10px;
+        font-family: $font-brand;
+        background: linear-gradient(#F2EDE9, #DED8D3);
+    }
+}
