@@ -1,0 +1,12 @@
+.l-main {
+    padding: 0 87px;
+    @include mq() {
+        padding: 0 40px;
+    }
+    @include mq(sm) {
+        padding: 0 20px;
+    }
+    &__wrapper {
+        display: flex;
+    }
+}

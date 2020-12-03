@@ -1,0 +1,48 @@
+.p-card {
+    
+    &__wrapper {
+        display: flex;
+    }
+
+    height: $card-height;
+    background-size: 100% auto;
+    @include mq() {
+        height: $card-responsive-height;
+    }
+    @include mq(sm) {
+        height: $card-responsive-sm-height;
+    }
+
+    &--take-out {
+        background-image: url(./../../../img/card_bg1.png);
+        margin-right: 40px;
+    }
+    &--eat-in {
+        background-image: url(./../../../img/card_bg2.png);
+        margin-left: 40px;
+    }
+    
+    &__ttl {
+        font-size: 63px;
+        padding: 20px;
+        &::before {
+            content: "";
+            border-bottom: 50px;
+        }
+    }
+    &__sub {
+        &-wrapper {
+            padding-left: 15px;
+            background-color: #FFF;
+        }
+        &-ttl {
+            font-size: 24px;
+            padding: 15px;
+        }
+        &-description {
+            font-size: 16px;
+            padding: 15px;
+            padding-bottom: 22px;
+        }
+    }
+}

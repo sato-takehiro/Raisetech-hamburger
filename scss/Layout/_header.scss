@@ -6,4 +6,10 @@
     height: $header-height;
     padding-left: 51px;
     padding-right: 24px;
+    @include mq() {
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+        padding: 0 0;
+    }
 }

@@ -1,11 +1,21 @@
 //Foundation
 @import "Foundation/reset";
-@import "Foundation/variable";
-@import "Foundation/base";
-@import "Foundation/mixin";
+@import "./Foundation/variable";
+@import "./Foundation/base";
+@import "./Foundation/mixin";
 
-@import "Object/Component/font-awsome";
+@import "./Object/Component/font-awsome";
 //header
-@import "Layout/header";
-@import "Object/Component/header-logo";
-@import "Object/Project/search";
+@import "./Layout/header";
+@import "./Object/Component/header-logo";
+@import "./Object/Project/search";
+
+//content
+@import "./Layout/content";
+
+//hero
+@import "./Object/Project/hero";
+@import "./Object/Component/ttl";
+
+//card
+@import "./Object/Project/card";

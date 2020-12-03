@@ -1,4 +1,8 @@
 .c-header-logo {
     font-size: 50px;
     font-weight: bold;
+    @include mq() {
+        padding-top: 4rem;
+        font-size: 30px;
+    }
 }

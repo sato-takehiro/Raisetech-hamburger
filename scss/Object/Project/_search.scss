@@ -1,11 +1,16 @@
 .p-search {
     height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include mq() {
+        padding: 3.8rem 0;
+    }
     &__form {
         height: inherit;
         width: 311px;
         margin-right: 11px;
         border-radius: 10px;
-        align-items: center;
         padding: 5px;
     }
 
