@@ -4,18 +4,22 @@
 @import "./Foundation/base";
 @import "./Foundation/mixin";
 
-@import "./Object/Component/font-awsome";
-//header
+//Layout
 @import "./Layout/header";
+@import "./Layout/content";
+@import "./Layout/sidebar";
+@import "./Layout/footer";
+
+//header
 @import "./Object/Component/header-logo";
 @import "./Object/Project/search";
+@import "./Object/Component/font-awsome";
 
 //hero
 @import "./Object/Project/hero";
 @import "./Object/Component/ttl";
 
-//content
-@import "./Layout/content";
-
 //card
 @import "./Object/Project/card";
+
+//utility
