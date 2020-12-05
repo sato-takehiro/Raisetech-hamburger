@@ -10,12 +10,12 @@
 @import "./Object/Component/header-logo";
 @import "./Object/Project/search";
 
-//content
-@import "./Layout/content";
-
 //hero
 @import "./Object/Project/hero";
 @import "./Object/Component/ttl";
+
+//content
+@import "./Layout/content";
 
 //card
 @import "./Object/Project/card";

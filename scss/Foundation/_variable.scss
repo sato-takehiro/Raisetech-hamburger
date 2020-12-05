@@ -4,6 +4,7 @@ $font-brand: 'M +1m', sans-serif;
 $font-color-defalut: #707070;
 $font-color-brand: #FFF;
 $border-color-defalut: #707070;
+$border-color-brand: #FFF;
 
 //header
 $header-background-color: #FFF7EF;
@@ -13,10 +14,13 @@ $header-height: 170px;
 $hero-height: 53rem;
 $hero-responsive-height: 28.5rem;
 
+//contents
+$contents-background-color: #FFFDFA;
+
 //card
-$card-height: 1520px;
-$card-responsive-height: 535px;
-$card-responsive-sm-height: 505px;
+$card-height: 940px;
+$card-responsive-height: 940px;
+$card-responsive-sm-height: 725px;
 
 //sidebar
 $sidebar-width: 289px;

@@ -1,6 +1,8 @@
 .p-hero {
     height: $hero-height;
     padding-left: 6.8rem;
+    display: flex;
+    align-items: center;
     background-image: url("../../../img/hero_bg1.png");
     background-size: cover;
     background-position: center right;
