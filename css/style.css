@@ -166,7 +166,7 @@ span {
           align-items: center;
   background-color: #FFF7EF;
   height: 170px;
-  padding-left: 51px;
+  padding-left: 3vw;
   padding-right: 24px;
 }
 
@@ -196,8 +196,36 @@ span {
   }
 }
 
+.l-sidebar {
+  width: 289px;
+  background-color: #F2EDE9;
+}
+
+.l-sidebar__wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media screen and (max-width: 959px) {
+  .l-sidebar__wrapper {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 959px) {
+  .l-sidebar {
+    display: none;
+  }
+}
+
+.l-sidebar__opponent {
+  width: 100%;
+}
+
 .c-header-logo {
-  font-size: 50px;
+  font-size: 4vw;
   font-weight: bold;
 }
 

@@ -4,7 +4,7 @@
     align-items: center;
     background-color: $header-background-color;
     height: $header-height;
-    padding-left: 51px;
+    padding-left: 3vw;
     padding-right: 24px;
     @include mq() {
         display: block;
