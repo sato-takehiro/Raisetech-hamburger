@@ -145,6 +145,7 @@ body {
 
 a {
   text-decoration: none;
+  color: #707070;
 }
 
 span {
@@ -167,7 +168,7 @@ span {
   background-color: #FFF7EF;
   height: 170px;
   padding-left: 3vw;
-  padding-right: 24px;
+  padding-right: 1.56vw;
 }
 
 @media screen and (max-width: 959px) {
@@ -181,18 +182,18 @@ span {
 
 .l-contents {
   background-color: #FFFDFA;
-  padding: 0 87px;
+  padding: 0 5.72vw;
 }
 
 @media screen and (max-width: 959px) {
   .l-contents {
-    padding: 0 40px;
+    padding: 0 4.79vw;
   }
 }
 
 @media screen and (max-width: 559px) {
   .l-contents {
-    padding: 0 20px;
+    padding: 0 5.33vw;
   }
 }
 
@@ -209,12 +210,6 @@ span {
 }
 
 @media screen and (max-width: 959px) {
-  .l-sidebar__wrapper {
-    display: block;
-  }
-}
-
-@media screen and (max-width: 959px) {
   .l-sidebar {
     display: none;
   }
@@ -225,7 +220,7 @@ span {
 }
 
 .c-header-logo {
-  font-size: 4vw;
+  font-size: 3.33vw;
   font-weight: bold;
 }
 
@@ -277,8 +272,8 @@ span {
 }
 
 .p-hero {
-  height: 53rem;
-  padding-left: 6.8rem;
+  height: 27.6vw;
+  padding-left: 4.47vw;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -289,39 +284,45 @@ span {
           align-items: center;
   background-image: url("../../../img/hero_bg1.png");
   background-size: cover;
-  background-position: center right;
 }
 
 @media screen and (max-width: 959px) {
   .p-hero {
-    height: 28.5rem;
+    padding-left: 10.31vw;
+    height: 34.17vw;
   }
 }
 
 @media screen and (max-width: 559px) {
   .p-hero {
-    padding-left: 2rem;
-    background-position: center center;
-    background-size: auto 100%;
+    padding-left: 6.66vw;
+    background-image: url("../../../img/hero_bg1-sm.png");
+    height: 76vw;
   }
 }
 
 .c-ttl {
-  font-size: 47px;
+  font-size: 2.08vw;
   font-weight: bold;
   color: #FFF;
 }
 
+@media screen and (max-width: 959px) {
+  .c-ttl {
+    font-size: 4.31vw;
+  }
+}
+
 @media screen and (max-width: 559px) {
   .c-ttl {
-    font-size: 24px;
+    font-size: 9.6vw;
   }
 }
 
 .p-card {
   position: relative;
   width: 50%;
-  height: 940px;
+  height: 62.1vw;
   background-size: cover;
 }
 
@@ -330,47 +331,47 @@ span {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding-top: 94px;
-  margin-bottom: 100px;
+  padding-top: 6.25vw;
+  margin-bottom: 6.77vw;
 }
 
 @media screen and (max-width: 959px) {
   .p-card__wrapper {
-    padding-top: 31px;
-    margin-bottom: 30px;
+    padding-top: 4.79vw;
+    margin-bottom: 4.79vw;
   }
 }
 
 @media screen and (max-width: 559px) {
   .p-card__wrapper {
-    padding-top: 16px;
+    padding-top: 5.33vw;
     display: block;
-    margin-bottom: 40px;
+    margin-bottom: 13.33vw;
   }
 }
 
 @media screen and (max-width: 959px) {
   .p-card {
-    height: 940px;
+    height: 81.65vw;
   }
 }
 
 @media screen and (max-width: 559px) {
   .p-card {
-    height: 725px;
+    height: 171vw;
     width: 100%;
-    margin-bottom: 16px;
+    margin-bottom: 5.33vw;
   }
 }
 
 .p-card--take-out {
   background-image: url(./../../../img/card_bg1.png);
-  margin-right: 30px;
+  margin-right: 2.08vw;
 }
 
 @media screen and (max-width: 959px) {
   .p-card--take-out {
-    margin-right: 16px;
+    margin-right: 2.39vw;
   }
 }
 
@@ -382,12 +383,12 @@ span {
 
 .p-card--eat-in {
   background-image: url(./../../../img/card_bg2.png);
-  margin-left: 30px;
+  margin-left: 2.08vw;
 }
 
 @media screen and (max-width: 959px) {
   .p-card--eat-in {
-    margin-left: 16px;
+    margin-left: 2.39vw;
   }
 }
 
@@ -398,8 +399,8 @@ span {
 }
 
 .p-card__ttl {
-  font-size: 63px;
-  padding: 20px;
+  font-size: 4.16vw;
+  padding: 1.04vw;
   color: #FFF;
   font-weight: bold;
   display: inline-block;
@@ -410,23 +411,37 @@ span {
   content: "";
   display: inline-block;
   position: absolute;
-  bottom: -15px;
-  left: 20px;
-  width: 50px;
+  bottom: -1.87vw;
+  left: 1.38vw;
+  width: 3.28vw;
   border-bottom: solid 7px #FFF;
 }
 
 @media screen and (max-width: 959px) {
+  .p-card__ttl::before {
+    bottom: -2.63vw;
+    width: 4.31vw;
+    left: 1.81vw;
+  }
+}
+
+@media screen and (max-width: 559px) {
+  .p-card__ttl::before {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 959px) {
   .p-card__ttl {
-    font-size: 38px;
-    padding: 12px;
+    font-size: 5.27vw;
+    padding: 1.19vw;
   }
 }
 
 @media screen and (max-width: 559px) {
   .p-card__ttl {
-    font-size: 32px;
-    padding: 10px;
+    font-size: 10.93vw;
+    padding: 2.66vw;
   }
 }
 
@@ -437,25 +452,122 @@ span {
 }
 
 .p-card__sub-wrapper {
-  padding-left: 15px;
+  padding-left: 1.04vw;
+  padding-right: 1.04vw;
+  padding-top: 0.88vw;
   background-color: rgba(255, 255, 255, 0.7);
-  margin: 20px;
+  margin: 1.04vw;
 }
 
 @media screen and (max-width: 959px) {
   .p-card__sub-wrapper {
-    margin: 12px;
+    padding-left: 1.31vw;
+    padding-right: 1.04vw;
+    padding-top: 2.39vw;
+    margin: 1.43vw;
+  }
+}
+
+@media screen and (max-width: 559px) {
+  .p-card__sub-wrapper {
+    padding-left: 2.66vw;
+    padding-right: 1.04vw;
+    padding-top: 5.33vw;
+    margin: 2.66vw;
   }
 }
 
 .p-card__sub-ttl {
   font-size: 24px;
-  padding: 15px;
+}
+
+@media screen and (max-width: 959px) {
+  .p-card__sub-ttl {
+    font-size: 2.87vw;
+  }
+}
+
+@media screen and (max-width: 559px) {
+  .p-card__sub-ttl {
+    font-size: 24px;
+  }
 }
 
 .p-card__sub-description {
   font-size: 16px;
-  padding: 15px;
-  padding-bottom: 22px;
+  padding-top: 1.45vw;
+  padding-bottom: 2.18vw;
+}
+
+@media screen and (max-width: 959px) {
+  .p-card__sub-description {
+    padding-top: 2.51vw;
+    padding-bottom: 3.71vw;
+  }
+}
+
+@media screen and (max-width: 559px) {
+  .p-card__sub-description {
+    padding-top: 5.33vw;
+    padding-bottom: 6vw;
+  }
+}
+
+.p-access {
+  background-color: #707070;
+  opacity: .8;
+}
+
+.p-access__wrapper {
+  background: url("./../../../img/access_bg1.png");
+  opacity: 1.0;
+}
+
+.p-access__ttl {
+  font-size: 36px;
+  color: #FFF;
+}
+
+@media screen and (max-width: 959px) {
+  .p-access__ttl {
+    font-size: 30px;
+  }
+}
+
+.p-access__description {
+  font-size: 16px;
+  color: #FFF;
+}
+
+@media screen and (max-width: 959px) {
+  .p-access__description {
+    font-size: 14px;
+  }
+}
+
+.p-sidebar {
+  padding-left: 46px;
+}
+
+.p-sidebar__ttl {
+  font-size: 34px;
+  font-weight: bold;
+  height: 170px;
+  line-height: 170px;
+}
+
+.p-sidebar__list {
+  font-size: 24px;
+  padding-bottom: 42px;
+}
+
+.p-sidebar__sub-list {
+  font-size: 20px;
+  padding-bottom: 23px;
+}
+
+.p-sidebar__sub-list-wrapper {
+  padding-bottom: 40px;
+  padding-left: 20px;
 }
 /*# sourceMappingURL=style.css.map */

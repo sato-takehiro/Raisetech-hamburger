@@ -2,16 +2,16 @@
     
     &__wrapper {
         display: flex;
-        padding-top: 94px;
-        margin-bottom: 100px;
+        padding-top: 6.25vw;
+        margin-bottom: 6.77vw;
         @include mq() {
-            padding-top: 31px;
-            margin-bottom: 30px;
+            padding-top: 4.79vw;
+            margin-bottom: 4.79vw;
         }
         @include mq(sm) {
-            padding-top: 16px;
+            padding-top: 5.33vw;
             display: block;
-            margin-bottom: 40px;
+            margin-bottom: 13.33vw;
         }
     }
     
@@ -25,14 +25,14 @@
     @include mq(sm) {
         height: $card-responsive-sm-height;
         width: 100%;
-        margin-bottom: 16px;
+        margin-bottom: 5.33vw;
     }
 
     &--take-out {
         background-image: url(./../../../img/card_bg1.png);
-        margin-right: 30px;
+        margin-right: 2.08vw;
         @include mq() {
-            margin-right: 16px;
+            margin-right: 2.39vw;
         }
         @include mq(sm) {
             margin-right: 0;
@@ -40,9 +40,9 @@
     }
     &--eat-in {
         background-image: url(./../../../img/card_bg2.png);
-        margin-left: 30px;
+        margin-left: 2.08vw;
         @include mq() {
-            margin-left: 16px;
+            margin-left: 2.39vw;
         }
         @include mq(sm) {
             margin-left: 0;
@@ -50,8 +50,8 @@
     }
     
     &__ttl {
-        font-size: 63px;
-        padding: 20px;
+        font-size: 4.16vw;
+        padding: 1.04vw;
         color: $font-color-brand;
         font-weight: bold;
         display: inline-block;
@@ -60,18 +60,26 @@
             content: "";
             display: inline-block;
             position: absolute;
-            bottom: -15px;
-            left: 20px;
-            width: 50px;
+            bottom: -1.87vw;
+            left: 1.38vw;
+            width: 3.28vw;
             border-bottom: solid 7px $border-color-brand;
+            @include mq() {
+                bottom: -2.63vw;
+                width: 4.31vw;
+                left: 1.81vw;
+            }
+            @include mq(sm) {
+                display: none;
+            }
         }
         @include mq() {
-            font-size: 38px;
-            padding: 12px;
+            font-size: 5.27vw;
+            padding: 1.19vw;
         }
         @include mq(sm) {
-            font-size: 32px;
-            padding: 10px;
+            font-size: 10.93vw;
+            padding: 2.66vw;
         }
     }
     &__description {
@@ -81,21 +89,45 @@
     }
     &__sub {
         &-wrapper {
-            padding-left: 15px;
+            padding-left: 1.04vw;
+            padding-right: 1.04vw;
+            padding-top: 0.88vw;
             background-color: rgba(255,255,255,0.7);
-            margin: 20px;
+            margin: 1.04vw;
             @include mq() {
-                margin: 12px;
+                padding-left: 1.31vw;
+                padding-right: 1.04vw;
+                padding-top: 2.39vw;
+                margin: 1.43vw;
+            }
+            @include mq(sm) {
+                padding-left: 2.66vw;
+                padding-right: 1.04vw;
+                padding-top: 5.33vw;
+                margin: 2.66vw;
             }
         }
         &-ttl {
             font-size: 24px;
-            padding: 15px;
+            @include mq() {
+                font-size: 2.87vw;
+            }
+            @include mq(sm) {
+                font-size: 24px;
+            }
         }
         &-description {
             font-size: 16px;
-            padding: 15px;
-            padding-bottom: 22px;
+            padding-top: 1.45vw;
+            padding-bottom: 2.18vw;
+            @include mq() {
+                padding-top: 2.51vw;
+                padding-bottom: 3.71vw;
+            }
+            @include mq(sm) {
+                padding-top: 5.33vw;
+                padding-bottom: 6vw;
+            }
         }
     }
 }

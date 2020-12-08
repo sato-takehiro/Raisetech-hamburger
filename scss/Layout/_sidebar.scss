@@ -3,7 +3,7 @@
     &__wrapper {
         display: flex;
         @include mq() {
-            display: block;
+            
         }
     }
     width: $sidebar-width;

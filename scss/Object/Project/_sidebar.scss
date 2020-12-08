@@ -1,0 +1,30 @@
+.p-sidebar {
+    padding-left: 46px;
+    
+    &__ttl {
+        font-size: 34px;
+        font-weight: bold;
+        height: $header-height;
+        line-height: $header-height;
+        @include mq() {
+                  
+        }
+
+    }
+
+    &__list {        
+        font-size: 24px;
+        padding-bottom: 42px;
+    }
+
+    &__sub-list {
+        font-size: 20px;
+        padding-bottom: 23px;
+
+        &-wrapper {
+            padding-bottom: 40px;
+            padding-left: 20px;
+        }
+    }
+
+}

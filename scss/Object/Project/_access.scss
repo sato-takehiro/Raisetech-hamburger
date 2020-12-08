@@ -1,0 +1,27 @@
+.p-access {
+
+    background-color: #707070;
+    opacity: .8;
+    
+
+    &__wrapper {
+        background: url("./../../../img/access_bg1.png");
+        opacity: 1.0;
+    }
+
+    &__ttl {
+        font-size: 36px;
+        color: $font-color-brand;
+        @include mq() {
+            font-size: 30px;
+        }
+    }
+
+    &__description {
+        font-size: 16px;
+        color: $font-color-brand;
+        @include mq() {
+            font-size: 14px;
+        }
+    }
+}
