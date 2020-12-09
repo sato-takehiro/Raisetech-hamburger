@@ -153,6 +153,10 @@ a {
   color: #707070;
 }
 
+a:focus, a:hover {
+  opacity: .8;
+}
+
 span {
   display: inline-block;
 }
@@ -203,7 +207,7 @@ span {
 }
 
 .l-sidebar {
-  width: 289px;
+  width: 367px;
   background-color: #F2EDE9;
 }
 
@@ -406,6 +410,15 @@ span {
   .p-card--eat-in {
     margin-left: 0;
   }
+}
+
+.p-card a {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .p-card__ttl {
@@ -659,6 +672,10 @@ span {
   font-size: 20px;
   color: #FFF;
   padding-left: 5px;
+}
+
+.c-footer-menu__list > a {
+  color: #FFF;
 }
 
 .c-footer-menu__list::after {

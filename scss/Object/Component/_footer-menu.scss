@@ -3,6 +3,9 @@
         font-size: 20px;
         color: $border-color-brand;
         padding-left: 5px;
+        & > a {
+            color: $border-color-brand;
+        }
         &::after {
             content: "";
             border-right: solid 3px $border-color-brand;
