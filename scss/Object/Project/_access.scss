@@ -1,27 +1,82 @@
 .p-access {
 
-    background-color: #707070;
-    opacity: .8;
-    
-
     &__wrapper {
-        background: url("./../../../img/access_bg1.png");
-        opacity: 1.0;
+        height: $map-height;
+        position: relative;
+        @include mq() {
+            height: $map-responsive-height;
+        }
+        @include mq(sm) {
+            height: $map-responsive-sm-height;
+        }
+    }
+
+    overflow: auto;
+    height: $map-height;
+    width: inherit;
+    background: linear-gradient(90deg,rgba(0,0,0, .8) 0%,rgba(0,0,0, .8) #{$map-content-width},rgba(0,0,0, .6) 100px,rgba(0,0,0, .6) 100%);
+    opacity: .8;
+    position: absolute;
+    padding-right: calc(#{$map-content-width} - #{$map-padding-right-width});
+    padding-left: 6.25vw;
+    padding-top: $map-padding-top-height;
+    padding-bottom: 9.11vw;
+
+    @include mq() {
+        height: $map-responsive-height;
+        background: rgba(0,0,0, .8);
+        padding-left: 5.03vw;
+        padding-right: 5.03vw;
+        padding-top: 5.05vw;
+        padding-bottom: 13.18vw;
+    }
+    @include mq(sm) {
+        padding-top: 10.66vw;
+        padding-left: 11.2vw;
+        padding-top: 10.66vw;
+        padding-bottom: 21.33vw;
+        height: $map-responsive-sm-height;
+        background: linear-gradient(180deg,$map-background-color-defalut 0%,$map-background-color-defalut #{$map-content-width},$map-background-color-brand 100px,$map-background-color-brand 100%);
     }
 
     &__ttl {
         font-size: 36px;
         color: $font-color-brand;
+        position: relative;
         @include mq() {
             font-size: 30px;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            display: inline-block;
+            bottom: -3.04vw;
+            width: 100px;
+            border-bottom: solid 3px $border-color-brand;
+            @include mq() {
+                bottom: -21px;
+            }
         }
     }
 
     &__description {
+        padding-top: 6.35vw;
         font-size: 16px;
         color: $font-color-brand;
+        line-height: 2.5;
         @include mq() {
             font-size: 14px;
+            padding-top: 42px;
+        }
+        @include mq(sm) {
+            font-size: 16px;
+        }
+    }
+
+    &__map {
+        width :100%;
+        height: 100%;
+        @include mq () {
         }
     }
 }
