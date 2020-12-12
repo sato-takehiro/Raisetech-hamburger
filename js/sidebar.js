@@ -8,7 +8,7 @@ $(function() {
 
     $sidebarOpen.on('click', function() {//クリックした時、sidebarを表示、背景色を暗くする
 
-        $sidebar.animate({'marginRight':"367"}, $sidebarTime);
+        $sidebar.addClass("is_active");
         $(this).addClass("is_active");
         $sidebarClose.removeClass("is_active");
         $sidebarOpponent.addClass("is_active");
@@ -18,12 +18,12 @@ $(function() {
 
     $sidebarClose.on('click', function() {//クリックした時、sidebarを非表示、背景色を戻す
         
-        $sidebar.animate({'marginRight':"0"}, $sidebarTime);
+        $sidebar.removeClass("is_active");
         $(this).addClass("is_active");
         $sidebarOpen.removeClass("is_active");
         $sidebarOpponent.removeClass("is_active");
         $sidebarWrapper.removeClass("is_active");
-        $sidebar.hide($sidebarTime);
+        //$sidebar.hide($sidebarTime);
     });
 
     $(window).on('resize', function() {//画面横幅がPCサイズに変更したときsidebarをPC版の設定に戻す
@@ -32,7 +32,7 @@ $(function() {
             $sidebarClose.removeClass("is_active");
             $sidebarOpponent.removeClass("is_active");
             $sidebarWrapper.removeClass("is_active");
-            $sidebar.animate({'marginRight':"0"}, 0);
+            $sidebar.removeClass("is_active");
         }
     });
 })
