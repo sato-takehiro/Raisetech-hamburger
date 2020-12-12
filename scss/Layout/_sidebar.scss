@@ -2,17 +2,27 @@
 
     &__wrapper {
         display: flex;
-        @include mq() {
-            
+        position: relative;
+        &.is_active {
+            background-color: $sidebar-opponent-background-color;
         }
     }
+
     width: $sidebar-width;
     background-color: $sidebar-background-color;
     @include mq() {
-        display: none;
+        position: absolute;
+        z-index: 100;
+        right: -$sidebar-width;
+        height: 100%;
     }
 
     &__opponent {
         width: 100%;
+        &.is_active {
+            @include mq() {
+                opacity: .2;
+            }
+        }
     }
 }

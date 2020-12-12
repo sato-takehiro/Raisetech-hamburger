@@ -1,20 +1,66 @@
 .p-sidebar {
     padding-left: 46px;
-    
+
+    &__button--open {
+        display: none;
+        font-size: 32px;
+        font-weight: bold;
+        &:hover {
+            opacity: .8;
+        }
+        @include mq() {
+            display: block;
+            cursor: pointer;
+            margin-left: -95px;
+            margin-top: 15px;
+            height: 30px;
+            width: 84px;
+        }
+        @include mq(sm) {
+            font-size: 20px;
+            margin-left: -70px;
+            margin-top: 20px;
+            height: 20px;
+            width: 52px;
+        }
+    }
+
+    &__button--close {
+        display: none;
+        @include mq() {
+            height: $header-height;
+            display: block;
+            cursor: pointer;
+            font-size: 50px;
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            padding-top: 0px;
+            padding-bottom: 123px;
+            &:hover {
+                opacity: .8;
+            }
+        }
+    }
+
     &__ttl {
         font-size: 34px;
         font-weight: bold;
         height: $header-height;
         line-height: $header-height;
         @include mq() {
-                  
+            display: none;
         }
-
     }
 
     &__list {        
         font-size: 24px;
         padding-bottom: 42px;
+
+        &-wrapper {
+            position: absolute;
+            top: $header-height;
+        }
     }
 
     &__sub-list {

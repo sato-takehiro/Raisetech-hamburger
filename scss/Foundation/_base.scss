@@ -19,8 +19,14 @@ html {  //remを扱いやすくする
 
   a:focus, a:hover {
     opacity: .8;
+    cursor: pointer;
   }
   
   span {
     display: inline-block;
+  }
+
+  input {
+    cursor: pointer;
+    
   }
