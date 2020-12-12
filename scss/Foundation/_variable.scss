@@ -1,6 +1,6 @@
 //Foundation/base
-$font-default: 'Roboto', sans-serif;
-$font-brand: 'M +1m', sans-serif;
+$font-default: 'M +1m', sans-serif;
+$font-brand: 'Roboto', sans-serif;
 $font-color-defalut: #707070;
 $font-color-brand: #FFF;
 $border-color-defalut: #707070;
@@ -35,9 +35,10 @@ $map-background-color-brand: rgba(0,0,0, .6);
 
 //sidebar
 $sidebar-width: 367px;
+$sidebar-button-close-mb: 123px;
 $sidebar-background-color: #F2EDE9;
 $sidebar-opponent-background-color: #000;
-$sidebar-slide-time: .5s;
+$sidebar-slide-time: 0.5s;
 
 //footer
 $footer-background-color: #9D8670;

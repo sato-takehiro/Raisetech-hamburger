@@ -42,6 +42,7 @@
     &__ttl {
         font-size: 36px;
         color: $font-color-brand;
+        font-weight: bold;
         position: relative;
         @include mq() {
             font-size: 30px;

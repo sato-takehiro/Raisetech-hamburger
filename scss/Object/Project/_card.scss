@@ -60,6 +60,7 @@
     
     &__ttl {
         font-size: 4.16vw;
+        font-family: $font-brand;
         padding: 1.04vw;
         color: $font-color-brand;
         font-weight: bold;
@@ -118,6 +119,7 @@
         }
         &-ttl {
             font-size: 24px;
+            font-weight: bold;
             @include mq() {
                 font-size: 2.87vw;
             }

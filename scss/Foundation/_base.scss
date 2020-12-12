@@ -1,3 +1,8 @@
+@font-face {
+	font-family: 'M +1m';
+  src: url(./../../font/mplus-1m-regular.ttf);
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -28,5 +33,4 @@ html {  //remを扱いやすくする
 
   input {
     cursor: pointer;
-    
   }

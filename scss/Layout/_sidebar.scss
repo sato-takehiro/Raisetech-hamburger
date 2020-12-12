@@ -12,12 +12,14 @@
     background-color: $sidebar-background-color;
     transition-duration: $sidebar-slide-time;
     @include mq() {
+        display: none;
         position: absolute;
         z-index: 100;
         right: -$sidebar-width;
         height: 100%;
     }
     &.is_active {
+        display: block;
         @include mq() {
             margin-right: $sidebar-width;
             transition-duration: $sidebar-slide-time;
@@ -26,7 +28,6 @@
 
     &__opponent {
         width: 100%;
-        transition-duration: $sidebar-slide-time;
         &.is_active {
             @include mq() {
                 opacity: .2;

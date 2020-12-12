@@ -1,6 +1,7 @@
 .c-header-logo {
     font-size: 3.33vw;
     font-weight: bold;
+    font-family: $font-brand;
     @include mq() {
         padding-top: 4rem;
         font-size: 30px;

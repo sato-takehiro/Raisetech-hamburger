@@ -5,6 +5,7 @@
         display: none;
         font-size: 32px;
         font-weight: bold;
+        font-family: $font-brand;
         &:hover {
             opacity: .8;
         }
@@ -26,9 +27,10 @@
     }
 
     &__button--close {
+        font-family: $font-brand;
         display: none;
         @include mq() {
-            height: $header-height;
+            height: $header-height - 123px;
             display: block;
             cursor: pointer;
             font-size: 50px;
@@ -36,7 +38,7 @@
             top: 10px;
             right: 15px;
             padding-top: 0px;
-            padding-bottom: 123px;
+            margin-bottom: $sidebar-button-close-mb;
             &:hover {
                 opacity: .8;
             }
@@ -44,6 +46,7 @@
     }
 
     &__ttl {
+        font-family: $font-brand;
         font-size: 34px;
         font-weight: bold;
         height: $header-height;
@@ -53,7 +56,8 @@
         }
     }
 
-    &__list {        
+    &__list {
+        font-weight: bold;       
         font-size: 24px;
         padding-bottom: 42px;
 
