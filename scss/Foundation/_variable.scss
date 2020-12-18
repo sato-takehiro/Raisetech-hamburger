@@ -13,7 +13,11 @@ $header-height: 170px;
 //hero
 $hero-height: 27.6vw;
 $hero-responsive-height: 34.17vw;
-$hero-responsive-sm-height: 76vw;;
+$hero-responsive-sm-height: 76vw;
+$hero-height-mini: 12.44vw;
+$hero-responsive-height-mini: 33.93vw;
+$hero-responsive-sm-height-mini: 75.46vw;
+$hero-bg-color: #000;
 
 //contents
 $contents-background-color: #FFFDFA;
@@ -32,6 +36,13 @@ $map-padding-right-width: 10vw;
 $map-content-width: 61.17%;
 $map-background-color-defalut: rgba(0,0,0, .8); 
 $map-background-color-brand: rgba(0,0,0, .6);
+
+//menu
+$menu-bg-color: #3C2B1C;
+
+
+//button
+$button-bg-color: #FFF;
 
 //sidebar
 $sidebar-width: 367px;

@@ -3,7 +3,19 @@
     font-weight: bold;
     color: $font-color-brand;
     font-family: $font-brand;
+    position: relative;
     @include mq(sm) {
         font-size: 36px;
+    }
+    > span {
+        position: absolute;
+        top: 55%;
+        left: 180%;
+        transform: translate(-50%, -50%);
+        width: 140%;
+        @include mq(sm) {
+            left: 70%;
+            top: 160%;
+        }
     }
 }

@@ -1,0 +1,87 @@
+.p-menu {
+    display: flex;
+    margin-bottom: 1.56vw;
+    height: 24.53vw;
+    @include mq() {
+        margin-bottom: 2.45vw;
+        height: 42.56vw;
+    }
+    @include mq(sm) {
+        display: block;
+        height: 156vw;				
+        margin-bottom: 5.6vw;
+        padding-right: 4.79vw;
+    }
+    
+    &__img {
+        width: 50%;
+        vertical-align: bottom;
+        @include mq(sm) {
+            width: 100%;
+        }
+        > img, source {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            @include mq(sm) {
+                height: auto;
+            }
+        }
+    }
+    &__contents {
+        background-color: $menu-bg-color;
+        color: $font-color-brand;
+        width: 50%;
+        padding-left: 3.28vw;
+        position: relative;
+        @include mq() {
+            padding-left: 4.19vw;
+        }
+        @include mq(sm) {
+            width: 100%;
+            height: 94.4vw;
+            padding-left: 4.53vw;
+        }
+    }
+    &__ttl {
+        font-size: 1.87vw;
+        font-weight: bold;
+        padding-top: 2.76vw;
+        @include mq() {
+            font-size: 2.39vw;
+            padding-top: 3.59vw;
+        }
+        @include mq(sm) {
+            font-size: 5.33vw;
+            padding-top: 8vw;
+        }
+    }
+    &__sub-ttl {
+        font-size: 1.25vw;
+        font-weight: bold;
+        padding-top: 2.44vw;
+        @include mq() {
+            font-size: 1.91vw;
+            padding-top: 2.87vw;
+        }
+        @include mq(sm) {
+            font-size: 4.26vw;
+            padding-top: 6.4vw;
+
+        }
+    }
+    &__description {
+        font-size: 0.83vw;
+        padding-top: 0.88vw;
+        padding-right: 5.41vw;
+        line-height: 1.5;
+        @include mq() {
+            font-size: 1.91vw;
+            padding-top: 1.19vw;
+        }
+        @include mq(sm) {
+            font-size: 4.26vw;
+            padding-top: 2.66vw;
+        }
+    }
+}

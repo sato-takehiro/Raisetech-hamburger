@@ -1,0 +1,19 @@
+.c-button {
+    font-weight: bold;
+    display: inline-block;
+    background-color: $button-bg-color;
+    color: $font-color-defalut;
+    font-size: 0.83vw;
+    border-radius: 70px;
+    padding: 1.4vw 5.41vw;
+    text-align: center;
+    white-space: nowrap;
+    @include mq() {
+        font-size: 1.91vw;
+        padding: 1.19vw 5.03vw;
+    }
+    @include mq(sm) {
+        font-size: 4.26vw;
+        padding: 2.66vw 11.2vw;
+    }
+}

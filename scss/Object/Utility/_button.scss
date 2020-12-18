@@ -1,0 +1,12 @@
+.u-button {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 2.5vw;
+    @include mq() {
+        bottom: 4.5vw;
+    }
+    @include mq(sm) {
+        bottom: 11.65vw;
+    }
+}

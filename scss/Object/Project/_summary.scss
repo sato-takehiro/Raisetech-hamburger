@@ -1,0 +1,32 @@
+.p-summary {
+
+    padding-top: 3.12vw;
+    padding-bottom: 3.64vw;
+    @include mq() {
+        padding-top: 4.31vw;
+        padding-bottom: 4.43vw;
+    }
+    @include mq(sm) {
+        padding-top: 8vw;
+        padding-bottom: 5.33vw;
+    }
+
+    &__ttl {
+        font-size: 36px;
+        font-weight: bold;
+        @include mq(sm) {
+            font-size: 28px;
+        }
+    }
+
+    &__description {
+        padding-top: 1.3vw;
+        font-size: 16px;
+        @include mq() {
+            padding-top: 3vw;
+        }
+        @include mq(sm) {
+            padding-top: 8vw;
+        }
+    }
+}

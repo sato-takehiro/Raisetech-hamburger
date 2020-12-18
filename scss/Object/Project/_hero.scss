@@ -4,15 +4,37 @@
     padding-left: 4.47vw;
     display: flex;
     align-items: center;
-    background-image: url("../../../img/hero_bg1.png");
     background-size: cover;
+    background-color: $hero-bg-color;
+
     @include mq() {
         padding-left: 10.31vw;
         height: $hero-responsive-height;
     }
     @include mq(sm) {
         padding-left: 6.66vw;
-        background-image: url("../../../img/hero_bg1-sm.png");
         height: $hero-responsive-sm-height;
     }
+
+    &--front {
+        background-image: url("../../../img/hero_bg1.png");
+        @include mq(sm) {
+            background-image: url("../../../img/hero_bg1-sm.png");
+        }
+    }
+    &--archive {
+        background-image: url("./../../../img/hero_bg2.png");
+        height: $hero-height-mini;
+        padding-left: 4.47vw;
+        @include mq() {
+            padding-left: 10.31vw;
+            background-image: url("./../../../img/hero_bg2-md.png");
+            height: $hero-responsive-height-mini;
+        }
+        @include mq(sm) {
+            height: $hero-responsive-sm-height-mini;
+            padding-eft: 9.86vw;
+        }
+    }
+
 }
