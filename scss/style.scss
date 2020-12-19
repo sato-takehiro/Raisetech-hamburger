@@ -31,6 +31,9 @@
 @import "./Object/Project/menu";
 @import "./Object/Component/button";
 
+//pagenation
+@import "./Object/Component/pagenation";
+
 //sidebar
 @import "./Object/Project/sidebar";
 
@@ -40,4 +43,5 @@
 
 //utility
 @import "./Object/Utility/font-size";
-@import "./Object/Utility/button"
+@import "./Object/Utility/button";
+@import "./Object/Utility/pd";

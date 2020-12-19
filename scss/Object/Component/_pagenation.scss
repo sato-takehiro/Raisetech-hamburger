@@ -1,0 +1,78 @@
+.c-pagenation {
+    font-size: 16px;
+    font-weight: bold;
+    font-family: $font-brand;
+    width: 600px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 7.81vw;
+    margin-bottom: 3.38vw;
+    :hover {
+        opacity: .8;
+        cursor: pointer;
+    }
+
+    @include mq() {
+        width: 71.94vw;
+        margin-top: 12.58vw;
+        margin-bottom: 3.59vw;
+    }
+    @include mq(sm) {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 15vw;
+        margin-bottom: 8vw;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    &__button {
+        background-color: #FFF;
+        border: solid 1px $border-color-defalut;
+        width: 35px;
+        height: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include mq() {
+            width: 4.19vw;
+            height: 4.19vw;
+        }
+        @include mq(sm) {
+            display: none;
+        }
+
+        &--current {
+            background-color: #3C2B1C;
+            color: #FFF;
+        }
+    }
+
+    &__description {
+        @include mq(sm) {
+            display: none;
+        }
+    }
+
+    &__arrow--left {
+        @include mq(sm) {
+            font-family: $font-default;
+            font-weight: normal;
+            & > a::after {
+                content: "前へ";
+            }
+        }
+    }
+
+    &__arrow--right {
+        @include mq(sm) {
+            font-family: $font-default;
+            font-weight: normal;
+            & > a::before {
+                content: "次へ";
+            }
+        }
+    }
+}

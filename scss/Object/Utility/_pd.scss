@@ -1,0 +1,7 @@
+.pd0 {
+    &.pd0-md {
+        @include mq(md-rev) {
+            padding: 0;
+        }
+    }
+}

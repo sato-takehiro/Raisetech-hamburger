@@ -1,25 +1,25 @@
 .p-menu {
     display: flex;
     margin-bottom: 1.56vw;
-    height: 24.53vw;
+    height: $menu-height;
     @include mq() {
         margin-bottom: 2.45vw;
-        height: 42.56vw;
+        height: $menu-responsive-height;
     }
     @include mq(sm) {
         display: block;
-        height: 156vw;				
+        height: $menu-responsive-sm-height;				
         margin-bottom: 5.6vw;
         padding-right: 4.79vw;
     }
     
     &__img {
         width: 50%;
-        vertical-align: bottom;
         @include mq(sm) {
             width: 100%;
         }
         > img, source {
+            vertical-align: bottom;
             width: 100%;
             height: 100%;
             object-fit: cover;
