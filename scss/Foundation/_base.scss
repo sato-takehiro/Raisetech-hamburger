@@ -16,6 +16,25 @@ html {  //remを扱いやすくする
     color: $font-color-defalut;
     border-color: $border-color-defalut;
   }
+
+  h2 {
+    font-size: 36px;
+    font-weight: bold;
+  }
+  h3 {
+    font-size: 28px;
+    font-weight: bold;
+  }
+  h4, h5, h6 {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  p {
+    font-size: 16px;
+    font-weight: normal;
+  }
+
   
   a {
     text-decoration: none;

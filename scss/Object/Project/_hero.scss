@@ -21,6 +21,9 @@
         @include mq(sm) {
             background-image: url("../../../img/hero_bg1-sm.png");
         }
+        & .c-ttl {
+            font-family: $font-default;
+        }
     }
     &--archive {
         background-image: url("./../../../img/hero_bg2.png");
@@ -34,6 +37,18 @@
         @include mq(sm) {
             height: $hero-responsive-sm-height-mini;
             padding-eft: 9.86vw;
+        }
+    }
+    &--single {
+        background-image: url("../../../img/hero_bg3.png");
+        @include mq() {
+            background-image: url("../../../img/hero_bg3-md.png");
+        }
+        @include mq(sm) {
+            background-image: url("../../../img/hero_bg3-md.png");
+        }
+        & .c-ttl {
+            font-family: $font-default;
         }
     }
 
