@@ -1,10 +1,10 @@
 .l-contents {
     background-color: $contents-background-color;
-    padding: 0 5.20vw;
+    margin: 0 5.20vw;
     @include mq() {
-        padding: 0 4.79vw;
+        margin: 0 4.79vw;
     }
     @include mq(sm) {
-        padding: 0 5.33vw;
+        margin: 0 5.33vw;
     }
 }

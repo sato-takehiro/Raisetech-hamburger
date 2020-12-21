@@ -48,6 +48,9 @@
             background-color: #3C2B1C;
             color: #FFF;
         }
+        & > a {
+            display: block;
+        }
     }
 
     &__description {

@@ -1,0 +1,13 @@
+.u-mt312vw {
+    margin-top: 3.12vw;
+}
+.u-mt72vw-md {
+    @include mq() {
+        margin-top: 7.2vw;
+    }
+}
+.u-mt8vw-sm {
+    @include mq(sm) {
+        margin-top: 8vw;
+    }
+}

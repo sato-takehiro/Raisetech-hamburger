@@ -5,31 +5,3 @@
         }
     }
 }
-
-.u-pt312vw {
-    padding-top: 3.12vw;
-}
-.u-pt72vw-md {
-    @include mq() {
-        padding-top: 7.2vw;
-    }
-}
-.u-pt8vw-sm {
-    @include mq(sm) {
-        padding-top: 8vw;
-    }
-}
-
-.u-mt312vw {
-    margin-top: 3.12vw;
-}
-.u-mt72vw-md {
-    @include mq() {
-        margin-top: 7.2vw;
-    }
-}
-.u-mt8vw-sm {
-    @include mq(sm) {
-        margin-top: 8vw;
-    }
-}

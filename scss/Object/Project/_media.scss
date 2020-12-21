@@ -1,0 +1,93 @@
+.p-media {
+    display: flex;
+    height: 18.6vw;
+    margin-top: 3.12vw;
+    @include mq() {
+        height: 44.36vw;
+        margin-top: 7.2vw;
+    }
+    @include mq(sm) {
+        height: 46.93vw;
+        margin-top: 8vw;
+    }
+    &--only {
+        @include mq() {
+            height: 22.6vw;
+        }
+        @include mq(sm) {
+            height: 23.73vw;
+        }
+        .p-media__img {
+            width: 100%;
+        }
+    }
+    &--only-center {
+       justify-content: center;
+       @include mq() {
+            height: 22.6vw;
+        }
+        @include mq(sm) {
+            height: 42.93vw;
+        } 
+       @include mq(sm) {
+           .p-media__img {
+               width: 90%;
+               height: 42.92vw;
+           }
+       }
+    }
+    &--nine {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        height: auto;
+        .p-media__img {
+            height: auto;
+            width: 32%;
+            padding-bottom: 2%;
+            @include mq() {
+                width: 48.5%;
+                padding-bottom: 3%;
+            }
+            @include mq(sm) {
+                width: 100%;
+                padding-top: 5%;
+            }
+        }
+    }
+    &__img {
+        object-fit: cover;
+        height: 18.6vw;
+        width: 45%;
+        @include mq() {
+            height: 22.6vw;
+        }
+        @include mq(sm) {
+            height: 23.73vw;
+        }
+    }
+    &__description {
+        overflow-y: scroll;
+        font-size: 16px;
+        width: 55%;
+        padding-left: 2.08vw;
+        @include mq() {
+            padding-left: 2.39vw;
+        }
+        @include mq(sm) {
+            padding-left: 2.66vw;
+        }
+    }
+    &--reverse {
+        flex-direction: row-reverse;
+        .p-media__description {
+                padding-left: 0;
+                padding-right: 2.08vw;
+            @include mq() {
+                padding-right: 2.39vw;
+            }
+            @include mq(sm) {
+                padding-right: 2.66vw;
+            }
+        }
+    }
+}

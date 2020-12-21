@@ -1,0 +1,23 @@
+.c-blockquote {
+    background-color: $quote-bg-color;
+    padding: 2.6vw;
+        @include mq() {
+            padding: 7.2vw;
+        }
+        @include mq(sm) {
+            padding: 8vw;
+        }
+    &__source {
+        padding-top: 3.12vw;
+        @include mq() {
+            padding-top: 7.19vw;
+        }
+        @include mq(sm) {
+            padding-top: 8vw;
+        }
+        a {
+            text-decoration: underline solid $quote-link-color;
+            color: $quote-link-font-color;
+        }
+    }
+}
