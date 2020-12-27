@@ -437,6 +437,26 @@ input {
   font-family: "M +1m", sans-serif;
 }
 
+.p-hero--page {
+  background-image: url("../../../img/hero_bg4.png");
+}
+
+@media screen and (max-width: 959px) {
+  .p-hero--page {
+    background-image: url("../../../img/hero_bg4-md.png");
+  }
+}
+
+@media screen and (max-width: 559px) {
+  .p-hero--page {
+    background-image: url("../../../img/hero_bg4-md.png");
+  }
+}
+
+.p-hero--page .c-ttl {
+  font-family: "M +1m", sans-serif;
+}
+
 .c-ttl {
   font-size: 60px;
   font-weight: bold;
@@ -984,6 +1004,39 @@ input {
   }
 }
 
+.c-button--solid {
+  display: inline-block;
+  border-radius: 10px;
+  border: solid 1px #707070;
+  font-family: "M +1m", sans-serif;
+  font-size: 16px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#F2EDE9), to(#DED8D3));
+  background: -webkit-linear-gradient(#F2EDE9, #DED8D3);
+  background: linear-gradient(#F2EDE9, #DED8D3);
+  width: 22.34vw;
+  padding: 2.08vw 8.2vw;
+}
+
+@media screen and (max-width: 959px) {
+  .c-button--solid {
+    width: 51.43vw;
+    padding: 4.79vw 11.2vw;
+  }
+}
+
+@media screen and (max-width: 559px) {
+  .c-button--solid {
+    width: 100%;
+    padding: 8vw 11.2vw;
+  }
+}
+
+@media screen and (max-width: 559px) {
+  .c-button--solid__wrapper {
+    text-align: center;
+  }
+}
+
 .c-pagenation {
   font-size: 16px;
   font-weight: bold;
@@ -1297,6 +1350,159 @@ input {
   }
 }
 
+.p-list {
+  font-size: 16px;
+}
+
+.p-list .p-list {
+  padding-left: 1rem;
+}
+
+.p-list__inner {
+  text-indent: -1.3rem;
+  padding-left: 1.3rem;
+}
+
+.p-list__inner:nth-of-type(2n) {
+  padding-bottom: 1.04vw;
+}
+
+@media screen and (max-width: 959px) {
+  .p-list__inner:nth-of-type(2n) {
+    padding-bottom: 2.39vw;
+  }
+}
+
+@media screen and (max-width: 559px) {
+  .p-list__inner:nth-of-type(2n) {
+    padding-bottom: 5.33vw;
+  }
+}
+
+.p-list__wrapper {
+  padding-top: 3.12vw;
+}
+
+@media screen and (max-width: 959px) {
+  .p-list__wrapper {
+    padding-top: 7.19vw;
+  }
+}
+
+@media screen and (max-width: 559px) {
+  .p-list__wrapper {
+    padding-top: 16vw;
+  }
+}
+
+.p-list--order {
+  counter-reset: item;
+}
+
+.p-list--order > .p-list__inner::before {
+  counter-increment: item;
+  content: counter(item) ".";
+}
+
+.p-list--order + .p-list__inner {
+  counter-reset: item;
+}
+
+.p-list--order + .p-list__inner::before {
+  counter-increment: item;
+  content: counter(item) ".";
+}
+
+.c-code {
+  font-size: 16px;
+}
+
+.c-code__wrapper {
+  background-color: #F5F5F5;
+  padding: 2.60vw;
+}
+
+@media screen and (max-width: 959px) {
+  .c-code__wrapper {
+    padding: 5.99vw;
+  }
+}
+
+@media screen and (max-width: 559px) {
+  .c-code__wrapper {
+    padding: 13.33vw;
+  }
+}
+
+.c-table {
+  font-size: 16px;
+  background-color: #FFF;
+  width: 100%;
+}
+
+.c-table th {
+  text-align: left;
+  border: solid 1px #707070;
+  height: 4.01vw;
+  padding-left: 30px;
+  vertical-align: middle;
+}
+
+@media screen and (max-width: 959px) {
+  .c-table th {
+    height: 9.23vw;
+  }
+}
+
+@media screen and (max-width: 559px) {
+  .c-table th {
+    height: 20.53vw;
+  }
+}
+
+.c-table th th:first-child {
+  width: 40%;
+}
+
+.c-table td {
+  border: solid 1px #707070;
+  height: 4.01vw;
+  padding-left: 30px;
+  vertical-align: middle;
+}
+
+@media screen and (max-width: 959px) {
+  .c-table td {
+    height: 9.23vw;
+  }
+}
+
+@media screen and (max-width: 559px) {
+  .c-table td {
+    height: 20.53vw;
+  }
+}
+
+.c-table td:first-child {
+  width: 40%;
+}
+
+.c-table__wrapper {
+  padding-top: 2.6vw;
+}
+
+@media screen and (max-width: 959px) {
+  .c-table__wrapper {
+    padding-top: 7.19vw;
+  }
+}
+
+@media screen and (max-width: 559px) {
+  .c-table__wrapper {
+    padding-top: 8vw;
+  }
+}
+
 .p-sidebar {
   padding-left: 46px;
 }
@@ -1485,6 +1691,24 @@ input {
 @media screen and (max-width: 559px) {
   .u-mt8vw-sm {
     margin-top: 8vw;
+  }
+}
+
+.u-bold {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 3.12vw;
+}
+
+@media screen and (max-width: 959px) {
+  .u-bold {
+    margin-bottom: 7.2vw;
+  }
+}
+
+@media screen and (max-width: 559px) {
+  .u-bold {
+    margin-bottom: 8vw;
   }
 }
 /*# sourceMappingURL=style.css.map */

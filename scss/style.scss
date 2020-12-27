@@ -40,6 +40,15 @@
 //media
 @import "./Object/Project/media";
 
+//list
+@import "./Object/Project/list";
+
+//code
+@import "./Object/Component/code";
+
+//table
+@import "./Object/Component/table";
+
 //sidebar
 @import "./Object/Project/sidebar";
 
@@ -52,3 +61,4 @@
 @import "./Object/Utility/button";
 @import "./Object/Utility/padding";
 @import "./Object/Utility/margin";
+@import "./Object/Utility/bold";

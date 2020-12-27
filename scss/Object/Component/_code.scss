@@ -1,0 +1,13 @@
+.c-code {
+    font-size: 16px;
+    &__wrapper {
+        background-color: $code-bg-color;
+        padding: 2.60vw;
+        @include mq() {
+            padding: 5.99vw;
+        }
+        @include mq(sm) {
+            padding: 13.33vw;
+        }
+    }
+}

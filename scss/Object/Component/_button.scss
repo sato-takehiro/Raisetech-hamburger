@@ -16,4 +16,27 @@
         font-size: 4.26vw;
         padding: 2.66vw 11.2vw;
     }
+    &--solid {
+        display: inline-block;
+        border-radius: 10px;
+        border: solid 1px #707070;
+        font-family: $font-default;
+        font-size: 16px;
+        background: linear-gradient(#F2EDE9, #DED8D3);
+        width: 22.34vw;
+        padding: 2.08vw 8.2vw;
+        @include mq() {
+            width: 51.43vw;
+            padding: 4.79vw 11.2vw;
+        }
+        @include mq(sm) {
+            width: 100%;
+            padding: 8vw 11.2vw;
+        }
+        &__wrapper {
+            @include mq(sm) {
+                text-align: center;
+            }
+        }
+    }
 }

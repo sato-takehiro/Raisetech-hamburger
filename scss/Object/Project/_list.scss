@@ -1,0 +1,44 @@
+.p-list {
+    font-size: 16px;
+    & & {
+        padding-left: 1rem;
+    }
+    &__inner {
+        text-indent: -1.3rem;
+        padding-left: 1.3rem;
+        &:nth-of-type(2n){
+            padding-bottom: 1.04vw;
+        @include mq() {
+            padding-bottom: 2.39vw;
+        }
+        @include mq(sm) {
+            padding-bottom: 5.33vw;
+        }
+        }
+    }
+    &__wrapper {
+        padding-top: 3.12vw;
+        @include mq() {
+            padding-top: 7.19vw;
+        }
+        @include mq(sm) {
+            padding-top: 16vw;
+        }
+    }
+    &--order {
+        counter-reset: item;
+        & > .p-list__inner {
+            &::before {
+                counter-increment:item;
+                content: counter(item)'.'; 
+            } 
+        }
+        & + .p-list__inner {
+            counter-reset: item;
+            &::before {
+                counter-increment:item;
+                content: counter(item)'.'; 
+            }
+        }
+    }
+}

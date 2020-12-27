@@ -51,5 +51,17 @@
             font-family: $font-default;
         }
     }
+    &--page {
+        background-image: url("../../../img/hero_bg4.png");
+        @include mq() {
+            background-image: url("../../../img/hero_bg4-md.png");
+        }
+        @include mq(sm) {
+            background-image: url("../../../img/hero_bg4-md.png");
+        }
+        & .c-ttl {
+            font-family: $font-default;
+        }
+    }
 
 }

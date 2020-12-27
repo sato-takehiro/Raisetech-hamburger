@@ -1,0 +1,46 @@
+.c-table {
+    font-size: 16px;
+    background-color: #FFF;
+    width: 100%;
+    & th {
+        text-align: left;
+        border: solid 1px #707070;
+        height: 4.01vw;
+        padding-left: 30px;
+        vertical-align: middle;
+        @include mq() {
+            height: 9.23vw;
+        }
+        @include mq(sm) {
+            height: 20.53vw;
+        }
+        & th:first-child {
+            width: 40%;
+        }
+    }
+    & td {
+        border: solid 1px #707070;
+        height: 4.01vw;
+        padding-left: 30px;
+        vertical-align: middle;
+        @include mq() {
+            height: 9.23vw;
+        }
+        @include mq(sm) {
+            height: 20.53vw;
+        }
+    }
+    & td:first-child {
+        width: 40%;
+    }
+
+&__wrapper {
+        padding-top: 2.6vw;
+        @include mq() {
+            padding-top: 7.19vw;
+        }
+        @include mq(sm) {
+            padding-top: 8vw;
+        }
+    }
+}
