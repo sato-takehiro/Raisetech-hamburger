@@ -30,7 +30,7 @@
         width: 100%;
         &.is_active {
             @include mq() {
-                opacity: .2;
+                opacity: 0;
                 transition-duration: $sidebar-slide-time;
             }
         }

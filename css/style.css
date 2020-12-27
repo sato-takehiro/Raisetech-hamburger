@@ -255,7 +255,7 @@ input {
 }
 
 .l-sidebar__wrapper.is_active {
-  background-color: #000;
+  background-color: #707070;
 }
 
 @media screen and (max-width: 959px) {
@@ -286,7 +286,7 @@ input {
 
 @media screen and (max-width: 959px) {
   .l-sidebar__opponent.is_active {
-    opacity: .2;
+    opacity: 0;
     -webkit-transition-duration: 0.5s;
             transition-duration: 0.5s;
   }
