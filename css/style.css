@@ -173,6 +173,7 @@ h4, h5, h6 {
 p {
   font-size: 16px;
   font-weight: normal;
+  line-height: 1.5;
 }
 
 a {
@@ -867,7 +868,6 @@ input {
     display: block;
     height: 156vw;
     margin-bottom: 5.6vw;
-    padding-right: 4.79vw;
   }
 }
 
@@ -1073,11 +1073,9 @@ input {
 
 @media screen and (max-width: 559px) {
   .c-pagenation {
-    margin-left: 0;
-    margin-right: 0;
+    width: 85%;
     margin-top: 15vw;
     margin-bottom: 8vw;
-    width: 100%;
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
@@ -1307,7 +1305,7 @@ input {
 }
 
 .p-media__description {
-  overflow-y: scroll;
+  overflow-y: hidden;
   font-size: 16px;
   width: 55%;
   padding-left: 2.08vw;

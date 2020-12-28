@@ -20,11 +20,9 @@
         margin-bottom: 3.59vw;
     }
     @include mq(sm) {
-        margin-left: 0;
-        margin-right: 0;
+        width: 85%;
         margin-top: 15vw;
         margin-bottom: 8vw;
-        width: 100%;
         justify-content: space-between;
     }
 
