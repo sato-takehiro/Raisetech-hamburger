@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet"><!-- fontawsome CDN  -->
-    <link rel="preconnect" href="https://fonts.gstatic.com"><!-- googlefonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="css/hamburger.css"><!--style.css-->
-    <title>Hamburger</title>
-</head>
+<?php get_header(); //header.phpを読み込むテンプレートタグ（インクルードタグ）?>
 <body>
     <div class="l-sidebar__wrapper">
         <div class="l-sidebar__opponent">
@@ -140,16 +130,4 @@
             </ul><!-- /.p-sidebar-list__wrapper -->
         </aside>
     </div>
-    <footer class="l-footer">
-        <div class="c-footer-menu">
-            <ul class="c-footer-menu__list-wrapper">
-                <li class="c-footer-menu__list"><a href="#">ショップ情報</a></li>
-                <li class="c-footer-menu__list"><a href="#">ヒストリー</a></li>
-            </ul>
-        </div>
-        <small class="c-footer-copyright">Copyright: RaiseTech</small>
-    </footer>
-<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script><!-- jQuery CDN -->
-<script type="text/javascript" src="./js/sidebar.js"></script><!-- sidebar.js -->
-</body>
-</html>
+<?php get_footer(); //footer.phpを読み込むテンプレートタグ（インクルードタグ）?>
