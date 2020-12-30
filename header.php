@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com"><!-- googlefonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="css/hamburger.css"><!--hamburger.css-->
-    <!--<link type="text/css" rel="stylesheet" href="style.css">--><!--style.css-->
+    <link type="text/css" rel="stylesheet" href="style.css"><!--style.css-->
     <title>Hamburger</title>
 </head>
 <body>
