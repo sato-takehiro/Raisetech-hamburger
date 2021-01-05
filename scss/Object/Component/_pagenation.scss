@@ -45,6 +45,9 @@
         &--current {
             background-color: #3C2B1C;
             color: #FFF;
+            & > a {
+                color: #FFF;
+            }
         }
         & > a {
             display: block;

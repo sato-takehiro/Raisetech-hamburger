@@ -17,47 +17,47 @@
     }
 
     &--front {
-        background-image: url("../../../img/hero_bg1.png");
+        background-image: url("../img/hero_bg1.png");
         @include mq(sm) {
-            background-image: url("../../../img/hero_bg1-sm.png");
+            background-image: url("../img/hero_bg1-sm.png");
         }
         & .c-ttl {
             font-family: $font-default;
         }
     }
     &--archive {
-        background-image: url("./../../../img/hero_bg2.png");
+        background-image: url("../img/hero_bg2.png");
         height: $hero-height-mini;
         padding-left: 4.47vw;
         @include mq() {
             padding-left: 10.31vw;
-            background-image: url("./../../../img/hero_bg2-md.png");
+            background-image: url("../img/hero_bg2-md.png");
             height: $hero-responsive-height-mini;
         }
         @include mq(sm) {
             height: $hero-responsive-sm-height-mini;
-            padding-eft: 9.86vw;
+            padding-left: 9.86vw;
         }
     }
     &--single {
-        background-image: url("../../../img/hero_bg3.png");
+        background-image: url("../img/hero_bg3.png");
         @include mq() {
-            background-image: url("../../../img/hero_bg3-md.png");
+            background-image: url("../img/hero_bg3-md.png");
         }
         @include mq(sm) {
-            background-image: url("../../../img/hero_bg3-md.png");
+            background-image: url("../img/hero_bg3-md.png");
         }
         & .c-ttl {
             font-family: $font-default;
         }
     }
     &--page {
-        background-image: url("../../../img/hero_bg4.png");
+        background-image: url("../img/hero_bg4.png");
         @include mq() {
-            background-image: url("../../../img/hero_bg4-md.png");
+            background-image: url("../img/hero_bg4-md.png");
         }
         @include mq(sm) {
-            background-image: url("../../../img/hero_bg4-md.png");
+            background-image: url("../img/hero_bg4-md.png");
         }
         & .c-ttl {
             font-family: $font-default;

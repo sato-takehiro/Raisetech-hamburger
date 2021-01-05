@@ -6,11 +6,36 @@
                 <h2 class="p-summary__ttl">見出しが入ります</h2>
                 <p class="p-summary__description">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
             </section>
+            <?php
+                if( have_posts() ) :
+                    while( have_posts() ) :
+                        the_post(); ?>
+                        <section class="p-menu l-contents" id="post-<?php the_ID(); //投稿ID?>" <?php post_class(); //生成するページによってclassを付与する?>>
+                            <picture class="p-menu__img">
+                                <?php the_post_thumbnail() //設定されているときはアイキャッチ画像を表示?>
+                                <source media="(min-width: 960px)" srcset="<?php echo get_template_directory_uri(); ?>/img/menu_img.png">
+                                <source media="(min-width: 560px)" srcset="<?php echo get_template_directory_uri(); ?>/img/menu_img-md.png">
+                                <img src="<?php echo get_template_directory_uri(); ?>/img/menu_img-sm.png">
+                            </picture>
+                            <div class="p-menu__contents">
+                                <h3 class="p-menu__ttl"><?php the_title(); //投稿タイトルを表示?></h3>
+                                <h4 class="p-menu__sub-ttl">小見出しが入ります</h4>
+                                <p class="p-menu__description">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                                <?php// the_content( '詳しく見る' ); ?>
+                                <!--<a href="#" class="c-button u-button">詳しく見る</a>-->
+                            </div>
+                        </section>
+                    <?php endwhile;
+                else :
+                    ?><p class="l-contents">表示する記事がありません</p><?php
+                endif;
+            ?>
+            <!--
             <section class="p-menu l-contents">
                 <picture class="p-menu__img">
-                    <source media="(min-width: 960px)" srcset="img/menu_img.png">
-                    <source media="(min-width: 560px)" srcset="img/menu_img-md.png">
-                    <img src="img/menu_img-sm.png">
+                    <source media="(min-width: 960px)" srcset="<?php echo get_template_directory_uri(); ?>/img/menu_img.png">
+                    <source media="(min-width: 560px)" srcset="<?php echo get_template_directory_uri(); ?>/img/menu_img-md.png">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/menu_img-sm.png">
                 </picture>
                 <div class="p-menu__contents">
                     <h3 class="p-menu__ttl">見出しが入ります</h3>
@@ -21,9 +46,9 @@
             </section>
             <section class="p-menu l-contents">
                 <picture class="p-menu__img">
-                    <source media="(min-width: 960px)" srcset="img/menu_img.png">
-                    <source media="(min-width: 560px)" srcset="img/menu_img-md.png">
-                    <img src="img/menu_img-sm.png">
+                    <source media="(min-width: 960px)" srcset="<?php echo get_template_directory_uri(); ?>/img/menu_img.png">
+                    <source media="(min-width: 560px)" srcset="<?php echo get_template_directory_uri(); ?>/img/menu_img-md.png">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/menu_img-sm.png">
                 </picture>
                 <div class="p-menu__contents">
                     <h3 class="p-menu__ttl">見出しが入ります</h3>
@@ -34,9 +59,9 @@
             </section>
             <section class="p-menu l-contents">
                 <picture class="p-menu__img">
-                    <source media="(min-width: 960px)" srcset="img/menu_img.png">
-                    <source media="(min-width: 560px)" srcset="img/menu_img-md.png">
-                    <img src="img/menu_img-sm.png">
+                    <source media="(min-width: 960px)" srcset="<?php echo get_template_directory_uri(); ?>/img/menu_img.png">
+                    <source media="(min-width: 560px)" srcset="<?php echo get_template_directory_uri(); ?>/img/menu_img-md.png">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/menu_img-sm.png">
                 </picture>
                 <div class="p-menu__contents">
                     <h3 class="p-menu__ttl">見出しが入ります</h3>
@@ -47,9 +72,9 @@
             </section>
             <section class="p-menu l-contents">
                 <picture class="p-menu__img">
-                    <source media="(min-width: 960px)" srcset="img/menu_img.png">
-                    <source media="(min-width: 560px)" srcset="img/menu_img-md.png">
-                    <img src="img/menu_img-sm.png">
+                    <source media="(min-width: 960px)" srcset="<?php echo get_template_directory_uri(); ?>/img/menu_img.png">
+                    <source media="(min-width: 560px)" srcset="<?php echo get_template_directory_uri(); ?>/img/menu_img-md.png">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/menu_img-sm.png">
                 </picture>
                 <div class="p-menu__contents">
                     <h3 class="p-menu__ttl">見出しが入ります</h3>
@@ -60,9 +85,9 @@
             </section>
             <section class="p-menu l-contents">
                 <picture class="p-menu__img">
-                    <source media="(min-width: 960px)" srcset="img/menu_img.png">
-                    <source media="(min-width: 560px)" srcset="img/menu_img-md.png">
-                    <img src="img/menu_img-sm.png">
+                    <source media="(min-width: 960px)" srcset="<?php echo get_template_directory_uri(); ?>/img/menu_img.png">
+                    <source media="(min-width: 560px)" srcset="<?php echo get_template_directory_uri(); ?>/img/menu_img-md.png">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/menu_img-sm.png">
                 </picture>
                 <div class="p-menu__contents">
                     <h3 class="p-menu__ttl">見出しが入ります</h3>
@@ -70,7 +95,7 @@
                     <p class="p-menu__description">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
                     <a href="#" class="c-button u-button">詳しく見る</a>
                 </div>
-            </section>
+            </section>-->
             <div class="c-pagenation pd0 pd0-md l-contents">
                 <p class="c-pagenation__description"><a href="#">page 1/10</a></p>
                 <p class="c-pagenation__arrow--left"><a href="#"><<</a></p>

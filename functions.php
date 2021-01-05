@@ -25,3 +25,10 @@
     }
     //wp_enqueue_scriptsの処理の節目でhamburger_scriptを実行
     add_action( 'wp_enqueue_scripts', 'hamburger_script');
+
+    //アイキャッチ画像の有効化
+    function hamberger_setup_theme() {
+        add_theme_support('post-thumbnails');//サムネイル画像のサポートを許可する
+        set_post_thumbnail_size(760, 300, true);
+    }
+    add_action('after_setup_theme', 'hamberger_setup_theme');

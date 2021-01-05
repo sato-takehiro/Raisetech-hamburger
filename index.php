@@ -1,61 +1,48 @@
 <?php get_header(); //header.phpを読み込むテンプレートタグ（インクルードタグ）?>
-            <section class="p-hero p-hero--front">
-                <h1 class="c-ttl u-fs-40 u-fs-md-36">ダミーサイト</h1>      
+            <section class="l-contents p-hero p-hero--archive">
+                <h1 class="c-ttl">Menu:<span>チーズバーガー</span></h1>      
             </section>
-            <div class="p-card__wrapper l-contents">
-                <section class="p-card p-card--take-out">
-                    <a href="#">
-                        <h2 class="p-card__ttl">Take Out</h2>
-                        <div class="p-card__description">
-                            <div class="p-card__sub-wrapper">
-                                <h3 class="p-card__sub-ttl">
-                                    小見出しが入ります。
-                                </h3><!-- /.p-card__sub-ttl -->
-                                <p class="p-card__sub-description">
-                                    テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                                </p><!-- /.p-card__sub-description -->
+            <section class="p-summary l-contents">
+                <h2 class="p-summary__ttl">小見出しが入ります</h2>
+                <p class="p-summary__description">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+            </section>
+            <?php
+                if( have_posts() ) :
+                    while( have_posts() ) :
+                        the_post(); ?>
+                        <section class="p-menu l-contents" id="post-<?php the_ID(); //投稿ID?>" <?php post_class(); //生成するページによってclassを付与する?>>
+                            <picture class="p-menu__img">
+                                <?php //the_post_thumbnail() //設定されているときはアイキャッチ画像を表示?>
+                                <source media="(min-width: 960px)" srcset="<?php echo get_template_directory_uri(); ?>/img/menu_img.png">
+                                <source media="(min-width: 560px)" srcset="<?php echo get_template_directory_uri(); ?>/img/menu_img-md.png">
+                                <img src="<?php echo get_template_directory_uri(); ?>/img/menu_img-sm.png">
+                            </picture>
+                            <div class="p-menu__contents">
+                                <h3 class="p-menu__ttl"><?php the_title(); //投稿タイトルを表示?></h3>
+                                <h4 class="p-menu__sub-ttl">小見出しが入ります</h4>
+                                <p class="p-menu__description">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                                <?php //the_content( '詳しく見る' ); ?>
+                                <a href="#" class="c-button u-button">詳しく見る</a>
                             </div>
-                            <div class="p-card__sub-wrapper">
-                                <h3 class="p-card__sub-ttl">
-                                    小見出しが入ります。
-                                </h3><!-- /.p-card__sub-ttl -->
-                                <p class="p-card__sub-description">
-                                    テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                                </p><!-- /.p-card__sub-description -->
-                            </div>
-                        </div><!-- /.p-card__description -->
-                    </a>
-                </section><!-- /.p-card -->
-                <section class="p-card p-card--eat-in">
-                    <a href="#">
-                        <h2 class="p-card__ttl">Eat In</h2>
-                        <div class="p-card__description">
-                            <div class="p-card__sub-wrapper">
-                                <h3 class="p-card__sub-ttl">
-                                    小見出しが入ります。
-                                </h3><!-- /.p-card__sub-ttl -->
-                                <p class="p-card__sub-description">
-                                    テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                                </p><!-- /.p-card__sub-description -->
-                            </div>
-                            <div class="p-card__sub-wrapper">
-                                <h3 class="p-card__sub-ttl">
-                                    小見出しが入ります。
-                                </h3><!-- /.p-card__sub-ttl -->
-                                <p class="p-card__sub-description">
-                                    テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                                </p><!-- /.p-card__sub-description -->
-                            </div>
-                        </div>
-                    </a>
-                </section><!-- /.p-card -->
-            </div><!-- /.p-card__wrapper -->
-            <div class="p-access__wrapper">
-                <section class="p-access">
-                    <h2 class="p-access__ttl">見出しが入ります</h2>
-                    <p class="p-access__description">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-                </section>
-                <iframe class="p-access__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.7479754683745!2d139.7432442152582!3d35.65858048019946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bbd9009ec09%3A0x481a93f0d2a409dd!2z5p2x5Lqs44K_44Ov44O8!5e0!3m2!1sja!2sjp!4v1607438105194!5m2!1sja!2sjp" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                        </section>
+                    <?php endwhile;
+                else :
+                    ?><p class="l-contents">表示する記事がありません</p><?php
+                endif;
+            ?>
+            <div class="c-pagenation u-pd0 u-pd0-md l-contents">
+                <p class="c-pagenation__description"><a href="#">page 1/10</a></p>
+                <p class="c-pagenation__arrow--left"><a href="#"><<</a></p>
+                <p class="c-pagenation__button c-pagenation__button--current"><a href="#">1</a></p>
+                <p class="c-pagenation__button"><a href="#">2</a></p>
+                <p class="c-pagenation__button"><a href="#">3</a></p>
+                <p class="c-pagenation__button"><a href="#">4</a></p>
+                <p class="c-pagenation__button"><a href="#">5</a></p>
+                <p class="c-pagenation__button"><a href="#">6</a></p>
+                <p class="c-pagenation__button"><a href="#">7</a></p>
+                <p class="c-pagenation__button"><a href="#">8</a></p>
+                <p class="c-pagenation__button"><a href="#">9</a></p>
+                <p class="c-pagenation__arrow--right"><a href="#">>></a></p>
             </div>
         </div>
         <?php get_sidebar(); //siderbar.phpを読み込むテンプレートタグ（インクルードタグ）?>

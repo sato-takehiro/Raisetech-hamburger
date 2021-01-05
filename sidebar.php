@@ -2,7 +2,8 @@
 <aside class="l-sidebar p-sidebar">
     <div class="p-sidebar__button--close">×</div>
     <h2 class="p-sidebar__ttl">Menu</h2>
-    <ul class="p-sidebar__list-wrapper">
+    <?php wp_nav_menu();?>
+    <?php /*<ul class="p-sidebar__list-wrapper">
         <li class="p-sidebar__list">バーガー</li><!-- /.p-sidebar-list -->
         <ul class="p-sidebar__sub-list-wrapper">
             <li class="p-sidebar__sub-list"><a href="#">ハンバーガー</a></li><!-- /.p-sidebar__sub-list -->
@@ -29,5 +30,5 @@
             <li class="p-sidebar__sub-list"><a href="#">紅茶（Ice/Hot）</a></li><!-- /.p-sidebar__sub-list -->
             <li class="p-sidebar__sub-list"><a href="#">コーヒー（Ice/Hot）</a></li><!-- /.p-sidebar__sub-list -->
         </ul><!-- /.p-sidebar__sub-list__wrapper -->
-    </ul><!-- /.p-sidebar-list__wrapper -->
+    </ul><!-- /.p-sidebar-list__wrapper -->*/ ?>
 </aside>

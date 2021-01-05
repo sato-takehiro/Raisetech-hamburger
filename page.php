@@ -15,29 +15,29 @@
                 <p class="c-blockquote__source">出典元： <a href="#">○○○○○○○○○○○○</a></p>
             </blockquote>
             <section class="l-contents p-media p-media--only">
-                <img src="img/cooked-foods.png" class="p-media__img">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/cooked-foods.png" class="p-media__img">
             </section>
             <section class="l-contents p-media">
-                <img src="img/cooked-foods-mini.png" class="p-media__img">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/cooked-foods-mini.png" class="p-media__img">
                 <p class="p-media__description"> テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります</p>
             </section>
             <section class="l-contents p-media p-media--reverse">
-                <img src="img/cooked-foods-mini.png" class="p-media__img">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/cooked-foods-mini.png" class="p-media__img">
                 <p class="p-media__description"> テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります</p>
             </section>
             <section class="l-contents p-media p-media--only-center">
-                <img src="img/cooked-foods-mini.png" class="p-media__img">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/cooked-foods-mini.png" class="p-media__img">
             </section>
             <section class="l-contents p-media p-media--nine">
-                <img src="img/cooked-foods-mini.png" class="p-media__img">
-                <img src="img/cooked-foods-mini.png" class="p-media__img">
-                <img src="img/cooked-foods-mini.png" class="p-media__img">
-                <img src="img/cooked-foods-mini.png" class="p-media__img">
-                <img src="img/cooked-foods-mini.png" class="p-media__img">
-                <img src="img/cooked-foods-mini.png" class="p-media__img">
-                <img src="img/cooked-foods-mini.png" class="p-media__img">
-                <img src="img/cooked-foods-mini.png" class="p-media__img">
-                <img src="img/cooked-foods-mini.png" class="p-media__img">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/cooked-foods-mini.png" class="p-media__img">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/cooked-foods-mini.png" class="p-media__img">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/cooked-foods-mini.png" class="p-media__img">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/cooked-foods-mini.png" class="p-media__img">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/cooked-foods-mini.png" class="p-media__img">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/cooked-foods-mini.png" class="p-media__img">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/cooked-foods-mini.png" class="p-media__img">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/cooked-foods-mini.png" class="p-media__img">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/cooked-foods-mini.png" class="p-media__img">
             </section>
             <section class="l-contents p-list__wrapper">
                 <ol class="p-list p-list--order">

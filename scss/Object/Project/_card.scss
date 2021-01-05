@@ -29,7 +29,7 @@
     }
 
     &--take-out {
-        background-image: url(./../../../img/card_bg1.png);
+        background-image: url("../img/card_bg1.png");
         margin-right: 2.08vw;
         @include mq() {
             margin-right: 2.39vw;
@@ -39,7 +39,7 @@
         }
     }
     &--eat-in {
-        background-image: url(./../../../img/card_bg2.png);
+        background-image: url("../img/card_bg2.png");
         margin-left: 2.08vw;
         @include mq() {
             margin-left: 2.39vw;

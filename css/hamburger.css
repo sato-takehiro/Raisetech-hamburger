@@ -136,7 +136,7 @@ table {
 
 @font-face {
   font-family: 'M +1m';
-  src: url(./../../font/mplus-1m-regular.ttf);
+  src: url("../font/mplus-1m-regular.ttf");
 }
 
 *, *::before, *::after {
@@ -384,12 +384,12 @@ input {
 }
 
 .p-hero--front {
-  background-image: url("../../../img/hero_bg1.png");
+  background-image: url("../img/hero_bg1.png");
 }
 
 @media screen and (max-width: 559px) {
   .p-hero--front {
-    background-image: url("../../../img/hero_bg1-sm.png");
+    background-image: url("../img/hero_bg1-sm.png");
   }
 }
 
@@ -398,7 +398,7 @@ input {
 }
 
 .p-hero--archive {
-  background-image: url("./../../../img/hero_bg2.png");
+  background-image: url("../img/hero_bg2.png");
   height: 12.44vw;
   padding-left: 4.47vw;
 }
@@ -406,7 +406,7 @@ input {
 @media screen and (max-width: 959px) {
   .p-hero--archive {
     padding-left: 10.31vw;
-    background-image: url("./../../../img/hero_bg2-md.png");
+    background-image: url("../img/hero_bg2-md.png");
     height: 33.93vw;
   }
 }
@@ -414,23 +414,23 @@ input {
 @media screen and (max-width: 559px) {
   .p-hero--archive {
     height: 75.46vw;
-    padding-eft: 9.86vw;
+    padding-left: 9.86vw;
   }
 }
 
 .p-hero--single {
-  background-image: url("../../../img/hero_bg3.png");
+  background-image: url("../img/hero_bg3.png");
 }
 
 @media screen and (max-width: 959px) {
   .p-hero--single {
-    background-image: url("../../../img/hero_bg3-md.png");
+    background-image: url("../img/hero_bg3-md.png");
   }
 }
 
 @media screen and (max-width: 559px) {
   .p-hero--single {
-    background-image: url("../../../img/hero_bg3-md.png");
+    background-image: url("../img/hero_bg3-md.png");
   }
 }
 
@@ -439,18 +439,18 @@ input {
 }
 
 .p-hero--page {
-  background-image: url("../../../img/hero_bg4.png");
+  background-image: url("../img/hero_bg4.png");
 }
 
 @media screen and (max-width: 959px) {
   .p-hero--page {
-    background-image: url("../../../img/hero_bg4-md.png");
+    background-image: url("../img/hero_bg4-md.png");
   }
 }
 
 @media screen and (max-width: 559px) {
   .p-hero--page {
-    background-image: url("../../../img/hero_bg4-md.png");
+    background-image: url("../img/hero_bg4-md.png");
   }
 }
 
@@ -534,7 +534,7 @@ input {
 }
 
 .p-card--take-out {
-  background-image: url(./../../../img/card_bg1.png);
+  background-image: url("../img/card_bg1.png");
   margin-right: 2.08vw;
 }
 
@@ -551,7 +551,7 @@ input {
 }
 
 .p-card--eat-in {
-  background-image: url(./../../../img/card_bg2.png);
+  background-image: url("../img/card_bg2.png");
   margin-left: 2.08vw;
 }
 
@@ -1117,6 +1117,10 @@ input {
 
 .c-pagenation__button--current {
   background-color: #3C2B1C;
+  color: #FFF;
+}
+
+.c-pagenation__button--current > a {
   color: #FFF;
 }
 

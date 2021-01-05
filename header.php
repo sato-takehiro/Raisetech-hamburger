@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body>
+<body <?php body_class(); //現在のページに応じて自動でクラスを割り当てる関数?>>
     <div class="l-sidebar__wrapper">
         <div class="l-sidebar__opponent">
             <header class="l-header">
