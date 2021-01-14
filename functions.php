@@ -32,3 +32,4 @@
         set_post_thumbnail_size(760, 300, true);
     }
     add_action('after_setup_theme', 'hamberger_setup_theme');
+    

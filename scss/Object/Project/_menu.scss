@@ -77,10 +77,12 @@
         @include mq() {
             font-size: 1.91vw;
             padding-top: 1.19vw;
+            padding-right: 7.19vw;
         }
         @include mq(sm) {
             font-size: 4.26vw;
             padding-top: 2.66vw;
+            padding-right: 19.46vw;
         }
     }
 }

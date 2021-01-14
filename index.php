@@ -20,9 +20,9 @@
                             <div class="p-menu__contents">
                                 <h3 class="p-menu__ttl"><?php the_title(); //投稿タイトルを表示?></h3>
                                 <h4 class="p-menu__sub-ttl">小見出しが入ります</h4>
-                                <p class="p-menu__description">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-                                <?php //the_content( '詳しく見る' ); ?>
-                                <a href="#" class="c-button u-button">詳しく見る</a>
+                                    <?php $content_string = get_the_content('<a href=" the_permalink(); " class="c-button u-button">詳しく見る</a>');//投稿本文の一部のプレビュー、引数で「さらに...」を「詳しく見る」に置き換える 
+                                    $content_string = str_replace('<p','<p class="p-menu__description" ',$content_string);
+                                    echo $content_string; ?>
                             </div>
                         </section>
                     <?php endwhile;

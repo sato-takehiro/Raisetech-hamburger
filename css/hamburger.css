@@ -968,6 +968,7 @@ input {
   .p-menu__description {
     font-size: 1.91vw;
     padding-top: 1.19vw;
+    padding-right: 7.19vw;
   }
 }
 
@@ -975,6 +976,7 @@ input {
   .p-menu__description {
     font-size: 4.26vw;
     padding-top: 2.66vw;
+    padding-right: 19.46vw;
   }
 }
 
