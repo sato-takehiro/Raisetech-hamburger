@@ -33,3 +33,18 @@
     }
     add_action('after_setup_theme', 'hamberger_setup_theme');
     
+    //サイドバーを登録する
+    function whitesnow_widgets_init() {
+        // Register main sidebar
+        register_sidebar( array(
+          'name'          => 'Main Sidebar',
+          'id'            => 'sidebar-main',
+          'description'   => 'Add widgets you want to display in sidebar.',
+          'before_widget' => '<section id="%1$s" class="widget %2$s">',
+          'after_widget'  => '</section>',
+          'before_title'  => '<h5 class="widget-title">',
+          'after_title'   => '</h5>',
+        ) );
+      }
+      
+      add_action( 'widgets_init', 'whitesnow_widgets_init' );

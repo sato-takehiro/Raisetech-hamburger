@@ -19,17 +19,31 @@
                             </picture>
                             <div class="p-menu__contents">
                                 <h3 class="p-menu__ttl"><?php the_title(); //投稿タイトルを表示?></h3>
-                                <h4 class="p-menu__sub-ttl">小見出しが入ります</h4>
                                     <?php $content_string = get_the_content('<a href=" the_permalink(); " class="c-button u-button">詳しく見る</a>');//投稿本文の一部のプレビュー、引数で「さらに...」を「詳しく見る」に置き換える 
                                     $content_string = str_replace('<p','<p class="p-menu__description" ',$content_string);
-                                    echo $content_string; ?>
+                                    $content_string = str_replace('<h1','<h1 class="p-menu__description" ',$content_string);
+                                    $content_string = str_replace('<h2','<h2 class="p-menu__description" ',$content_string);
+                                    $content_string = str_replace('<h3','<h3 class="p-menu__description" ',$content_string);
+                                    $content_string = str_replace('<h4','<h4 class="p-menu__description" ',$content_string);
+                                    $content_string = str_replace('<h5','<h5 class="p-menu__description" ',$content_string);
+                                    $content_string = str_replace('<h6','<h6 class="p-menu__description" ',$content_string);
+                                    echo $content_string; //p,h1-h6タグにクラス名を付け、スタイルを適用する?>
                             </div>
                         </section>
-                    <?php endwhile;
-                else :
-                    ?><p class="l-contents">表示する記事がありません</p><?php
-                endif;
-            ?>
+                        <?php endwhile; ?>
+                    <?php
+                    $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;//現在のページ送り番号を取得する
+                    $pages = $wp_query->max_num_pages;//総ページ数を取得する
+                    $args = array(
+                        'mid_size' => 4,// 左右にそれぞれ表示するページ番号の数
+                        'prev_text' => '&lt;&lt;',// 前のリンクテキスト
+                        'next_text' => '&gt;&gt;',// 次のリンクテキスト
+                        'screen_reader_text' => 'page&nbsp;'.$paged.'/'.$pages.'&nbsp;',// ナビゲーションのヘッダーテキスト
+                    );
+                    the_posts_pagination($args); //ページネーションを表示する?>
+                <?php else ://記事がなかったときの表示内容?>
+                    <p class="l-contents">表示する記事がありません</p>
+                <?php endif; ?>
             <?php/*
             <section class="p-menu l-contents">
                 <picture class="p-menu__img">
@@ -71,20 +85,6 @@
                 </div>
             </section>
             */?>
-            <div class="c-pagenation u-pd0 u-pd0-md l-contents">
-                <p class="c-pagenation__description"><a href="#">page 1/10</a></p>
-                <p class="c-pagenation__arrow--left"><a href="#"><<</a></p>
-                <p class="c-pagenation__button c-pagenation__button--current"><a href="#">1</a></p>
-                <p class="c-pagenation__button"><a href="#">2</a></p>
-                <p class="c-pagenation__button"><a href="#">3</a></p>
-                <p class="c-pagenation__button"><a href="#">4</a></p>
-                <p class="c-pagenation__button"><a href="#">5</a></p>
-                <p class="c-pagenation__button"><a href="#">6</a></p>
-                <p class="c-pagenation__button"><a href="#">7</a></p>
-                <p class="c-pagenation__button"><a href="#">8</a></p>
-                <p class="c-pagenation__button"><a href="#">9</a></p>
-                <p class="c-pagenation__arrow--right"><a href="#">>></a></p>
-            </div>
         </div>
         <?php get_sidebar(); //siderbar.phpを読み込むテンプレートタグ（インクルードタグ）?>
     </div>
