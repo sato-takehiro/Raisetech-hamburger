@@ -26,8 +26,11 @@
     //wp_enqueue_scriptsの処理の節目でhamburger_scriptを実行
     add_action( 'wp_enqueue_scripts', 'hamburger_script');
 
-    //アイキャッチ画像の有効化
     function hamberger_setup_theme() {
+        //メニューを登録する
+        register_nav_menu( 'footer-navigation', 'Footer navigation' );
+
+        //アイキャッチ画像の有効化
         add_theme_support('post-thumbnails');//サムネイル画像のサポートを許可する
         set_post_thumbnail_size(760, 300, true);
     }
@@ -37,14 +40,15 @@
     function whitesnow_widgets_init() {
         // Register main sidebar
         register_sidebar( array(
-          'name'          => 'Main Sidebar',
-          'id'            => 'sidebar-main',
-          'description'   => 'Add widgets you want to display in sidebar.',
-          'before_widget' => '<section id="%1$s" class="widget %2$s">',
-          'after_widget'  => '</section>',
-          'before_title'  => '<h5 class="widget-title">',
-          'after_title'   => '</h5>',
+          'name'          => 'Main Sidebar',//サイドバーの名前
+          'id'            => 'sidebar-main',//サイドバーのID
+          'description'   => 'Add widgets you want to display in sidebar.',//サイドバーの説明文
+          'before_widget' => '<section id="%1$s" class="widget %2$s">',//ウィジットの前に表示する文字列
+          'after_widget'  => '</section>',//ウィジットの後に表示する文字列
+          'before_title'  => '<h5 class="widget-title">',//ウィジットのタイトルの前に表示する文字列
+          'after_title'   => '</h5>',//ウィジットのタイトルの後に表示する文字列
         ) );
       }
       
       add_action( 'widgets_init', 'whitesnow_widgets_init' );
+

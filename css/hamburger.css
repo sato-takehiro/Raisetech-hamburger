@@ -1048,7 +1048,7 @@ input {
   font-size: 16px;
   font-weight: bold;
   font-family: "Roboto", sans-serif;
-  width: 600px;
+  width: 800px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1088,9 +1088,22 @@ input {
   display: inline;
 }
 
+@media screen and (max-width: 559px) {
+  .navigation .screen-reader-text {
+    display: none;
+  }
+}
+
 .navigation .nav-links {
   position: relative;
   text-align: center;
+}
+
+@media screen and (max-width: 559px) {
+  .navigation .nav-links {
+    width: 100%;
+    margin-top: 100px;
+  }
 }
 
 .navigation .page-numbers {
@@ -1101,7 +1114,7 @@ input {
   height: 35px;
   text-align: center;
   line-height: 35px;
-  margin-right: 0.78vw;
+  margin-right: 0.6vw;
 }
 
 .navigation .page-numbers:hover {
@@ -1114,7 +1127,7 @@ input {
     width: 4.19vw;
     height: 4.19vw;
     line-height: 4vw;
-    margin-right: 1.79vw;
+    margin-right: 0.6vw;
   }
 }
 
@@ -1144,7 +1157,8 @@ input {
     left: 0;
     font-family: "M +1m", sans-serif;
     font-weight: normal;
-    display: contents;
+    display: inline-block;
+    width: 50px;
   }
   .navigation .page-numbers.prev::after {
     content: "前へ";
@@ -1161,7 +1175,8 @@ input {
     right: 0;
     font-family: "M +1m", sans-serif;
     font-weight: normal;
-    display: contents;
+    display: inline-block;
+    width: 50px;
   }
   .navigation .page-numbers.next::before {
     content: "次へ";
@@ -1577,39 +1592,26 @@ input {
   }
 }
 
-.p-sidebar__ttl {
-  font-family: "Roboto", sans-serif;
-  font-size: 34px;
-  font-weight: bold;
-  height: 170px;
-  line-height: 170px;
-}
-
 @media screen and (max-width: 959px) {
-  .p-sidebar__ttl {
-    display: none;
+  .p-sidebar .widget:first-of-type {
+    padding-top: 170px;
   }
 }
 
-.p-sidebar__list {
+.p-sidebar .widget .widget-title {
   font-weight: bold;
   font-size: 24px;
   padding-bottom: 42px;
 }
 
-.p-sidebar__list-wrapper {
-  position: absolute;
-  top: 170px;
-}
-
-.p-sidebar__sub-list {
-  font-size: 20px;
-  padding-bottom: 23px;
-}
-
-.p-sidebar__sub-list-wrapper {
+.p-sidebar .widget .menu {
   padding-bottom: 40px;
   padding-left: 20px;
+}
+
+.p-sidebar .widget .menu .menu-item {
+  font-size: 20px;
+  padding-bottom: 23px;
 }
 
 .c-footer-menu__list {
@@ -1634,6 +1636,39 @@ input {
 }
 
 .c-footer-menu__list-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 45px;
+}
+
+.c-footer-menu .menu-item {
+  font-size: 20px;
+  color: #FFF;
+  padding-left: 5px;
+}
+
+.c-footer-menu .menu-item > a {
+  color: #FFF;
+}
+
+.c-footer-menu .menu-item::after {
+  content: "";
+  border-right: solid 3px #FFF;
+  height: 20px;
+  padding-right: 5px;
+}
+
+.c-footer-menu .menu-item:last-child::after {
+  content: none;
+}
+
+.c-footer-menu .menu-item__wrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;

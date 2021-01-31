@@ -1,4 +1,4 @@
-.p-sidebar {
+.p-sidebar {//サイドバー全体
     padding-left: 46px;
 
     &__button--open {
@@ -45,36 +45,29 @@
         }
     }
 
-    &__ttl {
-        font-family: $font-brand;
-        font-size: 34px;
-        font-weight: bold;
-        height: $header-height;
-        line-height: $header-height;
-        @include mq() {
-            display: none;
+    .widget {//ウィジェット全体
+        
+        //最初のウィジェット
+        &:first-of-type {
+            @include mq() {
+                padding-top: $header-height;
+            }
         }
-    }
 
-    &__list {
-        font-weight: bold;       
-        font-size: 24px;
-        padding-bottom: 42px;
-
-        &-wrapper {
-            position: absolute;
-            top: $header-height;
+        .widget-title {//ウィジェットのタイトル
+            font-weight: bold;       
+            font-size: 24px;
+            padding-bottom: 42px;
         }
-    }
-
-    &__sub-list {
-        font-size: 20px;
-        padding-bottom: 23px;
-
-        &-wrapper {
+    
+        .menu {//メニュー全体
             padding-bottom: 40px;
             padding-left: 20px;
+    
+            .menu-item {//メニューのリスト
+                font-size: 20px;
+                padding-bottom: 23px;
+            }
         }
     }
-
 }

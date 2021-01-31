@@ -2,7 +2,7 @@
     font-size: 16px;
     font-weight: bold;
     font-family: $font-brand;
-    width: 600px;
+    width: 800px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,12 +25,19 @@
         font-size: 16px;
         font-weight: normal;
         display: inline;
+        @include mq(sm) {
+            display: none;
+        }
     }
 
     //ボタンを囲む要素
     .nav-links {
         position: relative;
         text-align: center;
+        @include mq(sm) {
+            width: 100%;
+            margin-top: 100px;
+        }
     }
     //ボタン部分
     .page-numbers {
@@ -41,7 +48,7 @@
         height: 35px;
         text-align: center;
         line-height: 35px;
-        margin-right: 0.78vw;
+        margin-right: 0.6vw;
         &:hover {
             opacity: .8;
             cursor: pointer;
@@ -51,7 +58,7 @@
             width: 4.19vw;
             height: 4.19vw;
             line-height: 4vw;
-            margin-right: 1.79vw;
+            margin-right: 0.6vw;
         }
         @include mq(sm) {
            display: none;
@@ -72,7 +79,8 @@
                 left: 0;
                 font-family: $font-default;
                 font-weight: normal;
-                display: contents;
+                display: inline-block;
+                width: 50px;
                 &::after {
                     content: "前へ";
                 }
@@ -85,7 +93,8 @@
                 right: 0;
                 font-family: $font-default;
                 font-weight: normal;
-                display: contents;
+                display: inline-block;
+                width: 50px;
                 &::before {
                     content: "次へ";
                 }
