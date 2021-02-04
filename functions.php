@@ -22,6 +22,9 @@
         wp_enqueue_style('hamburger', get_template_directory_uri() . '/css/hamburger.css', array(), '1.0.0');
         wp_enqueue_script('jQuery', 'https://code.jquery.com/jquery-3.5.1.min.js', array(), '3.5.1', true);
         wp_enqueue_script('sidebar-script', get_template_directory_uri() . '/js/sidebar.js', array(), '1.0.0', true);
+        if ( is_single()) : //投稿ページかつpostクラスがあるときにjsファイルを読み込む
+            wp_enqueue_script('single-script', get_template_directory_uri() . '/js/single.js', array(), '1.0.0', true);
+        endif;
     }
     //wp_enqueue_scriptsの処理の節目でhamburger_scriptを実行
     add_action( 'wp_enqueue_scripts', 'hamburger_script');
