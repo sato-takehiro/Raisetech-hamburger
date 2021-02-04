@@ -40,13 +40,15 @@
         }
     }
     &--single {
-        background-image: url("../img/hero_bg3.png");
+        background-image: none;
+        padding-left: 0;
+        /*background-image: url("../img/hero_bg3.png");
         @include mq() {
             background-image: url("../img/hero_bg3-md.png");
         }
         @include mq(sm) {
             background-image: url("../img/hero_bg3-md.png");
-        }
+        }*/
         & .c-ttl {
             font-family: $font-default;
         }

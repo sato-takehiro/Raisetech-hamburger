@@ -2,6 +2,7 @@
     display: flex;
     margin-bottom: 1.56vw;
     height: $menu-height;
+    position: relative;
     @include mq() {
         margin-bottom: 2.45vw;
         height: $menu-responsive-height;
@@ -13,22 +14,13 @@
     }
     
     &__img {
-        width: 50%;
+        width: 100%;
         vertical-align: bottom;
         height: 100%;
         object-fit: cover;
         @include mq(sm) {
-            height: auto;
-            width: 100%;
-        }
-        > img, source {
-            vertical-align: bottom;
             width: 100%;
             height: 100%;
-            object-fit: cover;
-            @include mq(sm) {
-                height: auto;
-            }
         }
     }
     &__contents {
@@ -47,16 +39,25 @@
         }
     }
     &__ttl {
-        font-size: 1.87vw;
+        font-size: 3.125vw;
         font-weight: bold;
-        padding-top: 2.76vw;
+        padding-top: 0;
+        padding-left: 4.47vw;
+        position: absolute;
+
         @include mq() {
-            font-size: 2.39vw;
-            padding-top: 3.59vw;
+            font-size: 7.18vw;
+            padding-top: 0;
+            padding-left: 10.29vw;
         }
         @include mq(sm) {
-            font-size: 5.33vw;
-            padding-top: 8vw;
+            font-size: 9.6vw;
+            padding-top: 15vw;
+            padding-left: 6.93vw;
+            top: 8vw;
+        }
+        &--single {
+            color: $menu-ttl-single-color;
         }
     }
     &__sub-ttl {

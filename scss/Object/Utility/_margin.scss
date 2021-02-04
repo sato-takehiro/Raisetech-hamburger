@@ -11,3 +11,31 @@
         margin-top: 8vw;
     }
 }
+
+.u-mt0 + .u-mt0 {
+    margin-top: 0;
+}
+.u-mt0-md + .u-mt0-md {
+    @include mq() {
+        margin-top: 0;
+    }
+}
+.u-mt0-sm + .u-mt0-sm {
+    @include mq(sm) {
+        margin-top: 0;
+    }
+}
+
+.u-mt0 + span + .u-mt0 {
+    margin-top: 0;
+}
+.u-mt0-md + span + .u-mt0-md {
+    @include mq() {
+        margin-top: 0;
+    }
+}
+.u-mt0-sm + span + .u-mt0-sm {
+    @include mq(sm) {
+        margin-top: 0;
+    }
+}
