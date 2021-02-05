@@ -12,6 +12,12 @@ $(function(){ //投稿ページであるsingle.phpで、投稿の見た目を整
         $('.post .wp-block-quote cite').addClass('c-blockquote__source');
     }
     if ($('.post .wp-block-image').length) {//画像があるとき
-        $('.post .wp-block-image').addClass('u-mt312vw u-mt72vw-md u-mt8vw-sm u-mt0');
+        $('.post .wp-block-image').addClass('p-media p-media--only u-mt312vw u-mt72vw-md u-mt8vw-sm u-mt0');
+        $('.post .wp-block-image img').addClass('p-media__img');
+    }
+    if ($('.post .wp-block-columns').length) {
+        $('.post .wp-block-columns').addClass('p-media');
+        $('.post .wp-block-columns').addClass('p-media');
+        $('.post .wp-block-columns p').addClass('p-media__description');
     }
 })

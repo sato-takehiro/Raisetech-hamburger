@@ -25,9 +25,6 @@
                 </div>
             <?php endwhile; ?>
             
-            <section class="l-contents p-media p-media--only">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/cooked-foods.png" class="p-media__img">
-            </section>
             <section class="l-contents p-media">
                 <img src="<?php echo get_template_directory_uri(); ?>/img/cooked-foods-mini.png" class="p-media__img">
                 <p class="p-media__description"> テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります</p>
