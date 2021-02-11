@@ -36,24 +36,7 @@
            }
        }
     }
-    &--nine {
-        flex-wrap: wrap;
-        justify-content: space-between;
-        height: auto;
-        .p-media__img {
-            height: auto;
-            width: 32%;
-            padding-bottom: 2%;
-            @include mq() {
-                width: 48.5%;
-                padding-bottom: 3%;
-            }
-            @include mq(sm) {
-                width: 100%;
-                padding-top: 5%;
-            }
-        }
-    }
+
     &__img {
         object-fit: cover;
         height: 18.6vw;
@@ -88,6 +71,33 @@
             @include mq(sm) {
                 padding-right: 2.66vw;
             }
+        }
+    }
+}
+
+//グループ化したときの画像の挙動について
+.wp-block-group__inner-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: auto;
+    .wp-block-image {
+        height: auto;
+        width: 32%;
+        padding-bottom: 2%;
+        @include mq() {
+            width: 48.5%;
+            padding-bottom: 3%;
+        }
+        @include mq(sm) {
+            width: 100%;
+            padding-top: 5%;
+        }
+        .p-media__img {
+            width: 100%;
+            height: auto;
+            padding: 0;
+            margin: 0;
         }
     }
 }

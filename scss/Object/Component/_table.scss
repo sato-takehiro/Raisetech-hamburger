@@ -1,4 +1,4 @@
-.c-table {
+table {
     font-size: 16px;
     background-color: #FFF;
     width: 100%;
@@ -34,7 +34,7 @@
         width: 40%;
     }
 
-&__wrapper {
+& .wp-block-table {
         padding-top: 2.6vw;
         @include mq() {
             padding-top: 7.19vw;

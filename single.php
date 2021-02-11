@@ -1,8 +1,4 @@
-<?php get_header(); //header.phpを読み込むテンプレートタグ（インクルードタグ）?>
-            <!--<section class="p-hero p-hero--single">
-                <h1 class="c-ttl u-fs-40 u-fs-md-36">h1 ダミーサイト</h1>      
-            </section>-->
-            
+<?php get_header(); //header.phpを読み込むテンプレートタグ（インクルードタグ）?>        
             <?php //記事を表示する
             while( have_posts() ) :
                 the_post(); ?>
@@ -24,88 +20,6 @@
                     </div>
                 </div>
             <?php endwhile; ?>
-            
-            <section class="l-contents p-media">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/cooked-foods-mini.png" class="p-media__img">
-                <p class="p-media__description"> テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります</p>
-            </section>
-            <section class="l-contents p-media p-media--reverse">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/cooked-foods-mini.png" class="p-media__img">
-                <p class="p-media__description"> テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります</p>
-            </section>
-            <section class="l-contents p-media p-media--only-center">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/cooked-foods-mini.png" class="p-media__img">
-            </section>
-            <section class="l-contents p-media p-media--nine">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/cooked-foods-mini.png" class="p-media__img">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/cooked-foods-mini.png" class="p-media__img">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/cooked-foods-mini.png" class="p-media__img">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/cooked-foods-mini.png" class="p-media__img">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/cooked-foods-mini.png" class="p-media__img">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/cooked-foods-mini.png" class="p-media__img">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/cooked-foods-mini.png" class="p-media__img">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/cooked-foods-mini.png" class="p-media__img">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/cooked-foods-mini.png" class="p-media__img">
-            </section>
-            <section class="l-contents p-list__wrapper">
-                <ol class="p-list p-list--order">
-                    <li class="p-list__inner">リストリストリスト</li>
-                    <li class="p-list__inner">リストリストリスト</li>
-                    <ol class="p-list p-list--order">
-                        <li class="p-list__inner">リスト2リスト2リスト2</li>
-                        <li class="p-list__inner">リスト2リスト2リスト2</li>
-                    </ol>
-                    <li class="p-list__inner">リストリストリスト</li>
-                    <li class="p-list__inner">リストリストリスト</li>
-                </ol>
-            </section>
-            <section class="l-contents p-list__wrapper">
-                <ul class="p-list">
-                    <li class="p-list__inner">リストリストリスト</li>
-                    <li class="p-list__inner">リストリストリスト</li>
-                        <ul class="p-list">
-                            <li class="p-list__inner">リスト2リスト2リスト2</li>
-                            <li class="p-list__inner">リスト2リスト2リスト2</li>
-                        </ul>
-                    </li>
-                    <li class="p-list__inner">リストリストリスト</li>
-                    <li class="p-list__inner">リストリストリスト</li>
-                </ul>
-            </section>
-            <section class="l-contents c-code__wrapper">
-                <pre class="c-code"><code>&lt;html&gt;
-    &lt;head&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-    &lt;/body&gt;
-&lt;/html&gt;</code></pre>
-            </section>
-            <section class="l-contents c-table__wrapper">
-                <table class="c-table">
-                    <tr>
-                        <th>テーブル</th>
-                        <th>テーブル</th>
-                    </tr>
-                    <tr>
-                        <td>テーブル</td>
-                        <td>テーブル</td>
-                    </tr>
-                    <tr>
-                        <td>テーブル</td>
-                        <td>テーブル</td>
-                    </tr>
-                    <tr>
-                        <td>テーブル</td>
-                        <td>テーブル</td>
-                    </tr>
-                </table>
-            </section>
-            <section class="l-contents u-mt312vw u-mt72vw-md u-mt8vw-sm c-button--solid__wrapper">
-                <a class="c-button c-button--solid">ボタン</a>
-            </section>
-            <section class="l-contents u-mt312vw u-mt72vw-md u-mt8vw-sm">
-                <p class="u-bold">boldboldboldboldboldboldbold</p>
-            </section>
         </div>
         <?php get_sidebar(); //siderbar.phpを読み込むテンプレートタグ（インクルードタグ）?>
     </div>

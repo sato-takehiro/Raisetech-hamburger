@@ -1,6 +1,7 @@
 .c-code {
     font-size: 16px;
     &__wrapper {
+        width: 100%;
         background-color: $code-bg-color;
         padding: 2.60vw;
         @include mq() {

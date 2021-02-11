@@ -21,8 +21,8 @@
         @include mq() {
             padding-top: 7.19vw;
         }
-        @include mq(sm) {
-            padding-top: 16vw;
+        &:first-of-type {
+            padding-top: 0;
         }
     }
     &--order {

@@ -15,9 +15,13 @@ $(function(){ //投稿ページであるsingle.phpで、投稿の見た目を整
         $('.post .wp-block-image').addClass('p-media p-media--only u-mt312vw u-mt72vw-md u-mt8vw-sm u-mt0');
         $('.post .wp-block-image img').addClass('p-media__img');
     }
-    if ($('.post .wp-block-columns').length) {
-        $('.post .wp-block-columns').addClass('p-media');
-        $('.post .wp-block-columns').addClass('p-media');
-        $('.post .wp-block-columns p').addClass('p-media__description');
+    if ($('.wp-block-code').length) { //ブロックコードがあるとき
+        $('.wp-block-code code').addClass('c-code');
+        if ($('.wp-block-group__inner-container > .wp-block-code').length) { //ブロックコードがある要素の直下にあるとき、
+            $('.wp-block-group__inner-container > .wp-block-code').addClass('c-code__wrapper u-mt312vw u-mt72vw-md u-mt8vw-sm');
+        }
+    }
+    if ($('.wp-block-table').length) {  //テーブルがあるとき
+        $('.wp-block-table').addClass('u-mt312vw u-mt72vw-md u-mt8vw-sm');
     }
 })
