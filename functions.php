@@ -30,12 +30,18 @@
     add_action( 'wp_enqueue_scripts', 'hamburger_script');
 
     function hamberger_setup_theme() {
+        //フィードのリンクの有効化
+        add_theme_support( 'automatic-feed-links' );
+
         //メニューを登録する
         register_nav_menu( 'footer-navigation', 'Footer navigation' );
 
         //アイキャッチ画像の有効化
         add_theme_support('post-thumbnails');//サムネイル画像のサポートを許可する
         set_post_thumbnail_size(760, 300, true);
+
+        //コンテンツの最大幅の設定
+        $GLOBALS['content_width'] = 704;
     }
     add_action('after_setup_theme', 'hamberger_setup_theme');
     

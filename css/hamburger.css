@@ -421,13 +421,6 @@ input {
 .p-hero--single {
   background-image: none;
   padding-left: 0;
-  /*background-image: url("../img/hero_bg3.png");
-        @include mq() {
-            background-image: url("../img/hero_bg3-md.png");
-        }
-        @include mq(sm) {
-            background-image: url("../img/hero_bg3-md.png");
-        }*/
 }
 
 .p-hero--single .c-ttl {
@@ -435,19 +428,7 @@ input {
 }
 
 .p-hero--page {
-  background-image: url("../img/hero_bg4.png");
-}
-
-@media screen and (max-width: 959px) {
-  .p-hero--page {
-    background-image: url("../img/hero_bg4-md.png");
-  }
-}
-
-@media screen and (max-width: 559px) {
-  .p-hero--page {
-    background-image: url("../img/hero_bg4-md.png");
-  }
+  padding-left: 0;
 }
 
 .p-hero--page .c-ttl {

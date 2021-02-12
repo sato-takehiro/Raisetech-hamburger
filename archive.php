@@ -44,47 +44,6 @@
                 <?php else ://記事がなかったときの表示内容?>
                     <p class="l-contents">表示する記事がありません</p>
                 <?php endif; ?>
-            <?php/*
-            <section class="p-menu l-contents">
-                <picture class="p-menu__img">
-                    <source media="(min-width: 960px)" srcset="<?php echo get_template_directory_uri(); ?>/img/menu_img.png">
-                    <source media="(min-width: 560px)" srcset="<?php echo get_template_directory_uri(); ?>/img/menu_img-md.png">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/menu_img-sm.png">
-                </picture>
-                <div class="p-menu__contents">
-                    <h3 class="p-menu__ttl">チーズバーガー</h3>
-                    <h4 class="p-menu__sub-ttl">小見出しが入ります</h4>
-                    <p class="p-menu__description">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-                    <a href="#" class="c-button u-button">詳しく見る</a>
-                </div>
-            </section>
-            <section class="p-menu l-contents">
-                <picture class="p-menu__img">
-                    <source media="(min-width: 960px)" srcset="<?php echo get_template_directory_uri(); ?>/img/menu_img.png">
-                    <source media="(min-width: 560px)" srcset="<?php echo get_template_directory_uri(); ?>/img/menu_img-md.png">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/menu_img-sm.png">
-                </picture>
-                <div class="p-menu__contents">
-                    <h3 class="p-menu__ttl">ダブルチーズバーガー</h3>
-                    <h4 class="p-menu__sub-ttl">小見出しが入ります</h4>
-                    <p class="p-menu__description">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-                    <a href="#" class="c-button u-button">詳しく見る</a>
-                </div>
-            </section>
-            <section class="p-menu l-contents">
-                <picture class="p-menu__img">
-                    <source media="(min-width: 960px)" srcset="<?php echo get_template_directory_uri(); ?>/img/menu_img.png">
-                    <source media="(min-width: 560px)" srcset="<?php echo get_template_directory_uri(); ?>/img/menu_img-md.png">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/menu_img-sm.png">
-                </picture>
-                <div class="p-menu__contents">
-                    <h3 class="p-menu__ttl">スペシャルチーズバーガー</h3>
-                    <h4 class="p-menu__sub-ttl">小見出しが入ります</h4>
-                    <p class="p-menu__description">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-                    <a href="#" class="c-button u-button">詳しく見る</a>
-                </div>
-            </section>
-            */?>
         </div>
         <?php get_sidebar(); //siderbar.phpを読み込むテンプレートタグ（インクルードタグ）?>
     </div>

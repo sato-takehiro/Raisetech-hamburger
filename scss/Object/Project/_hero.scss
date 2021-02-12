@@ -42,25 +42,12 @@
     &--single {
         background-image: none;
         padding-left: 0;
-        /*background-image: url("../img/hero_bg3.png");
-        @include mq() {
-            background-image: url("../img/hero_bg3-md.png");
-        }
-        @include mq(sm) {
-            background-image: url("../img/hero_bg3-md.png");
-        }*/
         & .c-ttl {
             font-family: $font-default;
         }
     }
     &--page {
-        background-image: url("../img/hero_bg4.png");
-        @include mq() {
-            background-image: url("../img/hero_bg4-md.png");
-        }
-        @include mq(sm) {
-            background-image: url("../img/hero_bg4-md.png");
-        }
+        padding-left: 0;
         & .c-ttl {
             font-family: $font-default;
         }
