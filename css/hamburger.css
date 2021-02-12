@@ -915,6 +915,45 @@ input {
   color: #fff;
 }
 
+.p-menu__ttl--search {
+  font-size: 1.87vw;
+  padding-left: 0;
+  padding-top: 2.76vw;
+  position: static;
+}
+
+@media screen and (max-width: 959px) {
+  .p-menu__ttl--search {
+    font-size: 2.39vw;
+  }
+}
+
+@media screen and (max-width: 559px) {
+  .p-menu__ttl--search {
+    font-size: 5.33vw;
+  }
+}
+
+.p-menu__ttl--archive {
+  font-size: 1.87vw;
+  padding-left: 0;
+  padding-top: 2.76vw;
+  position: static;
+  font-size: 1.87vw;
+}
+
+@media screen and (max-width: 959px) {
+  .p-menu__ttl--archive {
+    font-size: 2.39vw;
+  }
+}
+
+@media screen and (max-width: 559px) {
+  .p-menu__ttl--archive {
+    font-size: 5.33vw;
+  }
+}
+
 .p-menu__sub-ttl {
   font-size: 1.25vw;
   font-weight: bold;

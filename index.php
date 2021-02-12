@@ -1,10 +1,12 @@
 <?php get_header(); //header.phpを読み込むテンプレートタグ（インクルードタグ）?>
-            <section class="l-contents p-hero p-hero--archive">
-                <h1 class="c-ttl">Menu:<span>チーズバーガー</span></h1>      
+            <section class="p-hero p-hero--archive">
+                <?php //見出しを出力する
+                the_archive_title('<h1 class="c-ttl">Menu:<span>','index</span></h1>');
+                ?>    
             </section>
             <section class="p-summary l-contents">
-                <h2 class="p-summary__ttl">小見出しが入ります</h2>
-                <p class="p-summary__description">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                <h2 class="p-summary__ttl">小見出しが入りますindex</h2>
+                <p class="p-summary__description">ここはindexページです。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
             </section>
             <?php
                 if( have_posts() ) :
@@ -21,15 +23,17 @@
                                 </picture>
                             <?php endif; ?>
                             <div class="p-menu__contents">
-                                <h3 class="p-menu__ttl"><?php the_title(); //投稿タイトルを表示?></h3>
-                                    <?php $content_string = get_the_content('<a href=" the_permalink(); " class="c-button u-button">詳しく見る</a>');//投稿本文の一部のプレビュー、引数で「さらに...」を「詳しく見る」に置き換える 
-                                    $content_string = str_replace('<p','<p class="p-menu__description" ',$content_string);
+                                <h3 class="p-menu__ttl  p-menu__ttl--search"><?php the_title(); //投稿タイトルを表示?></h3>
+                                    <?php
+                                    $content_string = get_the_content('詳しく見る');//投稿本文の一部のプレビュー、引数で「さらに...」を「詳しく見る」に置き換える 
+                                    $content_string = str_replace('<p','<p class=".p-menu__description." ',$content_string);
                                     $content_string = str_replace('<h1','<h1 class="p-menu__description" ',$content_string);
                                     $content_string = str_replace('<h2','<h2 class="p-menu__description" ',$content_string);
                                     $content_string = str_replace('<h3','<h3 class="p-menu__description" ',$content_string);
                                     $content_string = str_replace('<h4','<h4 class="p-menu__description" ',$content_string);
                                     $content_string = str_replace('<h5','<h5 class="p-menu__description" ',$content_string);
                                     $content_string = str_replace('<h6','<h6 class="p-menu__description" ',$content_string);
+                                    $content_string = str_replace('<a','<a class="c-button u-button" ',$content_string);
                                     echo $content_string; //p,h1-h6タグにクラス名を付け、スタイルを適用する?>
                             </div>
                         </section>

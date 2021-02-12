@@ -59,6 +59,31 @@
         &--single {
             color: $menu-ttl-single-color;
         }
+        &--search {
+            font-size: 1.87vw;
+            padding-left: 0;
+            padding-top: 2.76vw;
+            position: static;
+            @include mq() {
+                font-size: 2.39vw;
+            }
+            @include mq(sm) {
+                font-size: 5.33vw;
+            }
+        }
+        &--archive {
+            font-size: 1.87vw;
+            padding-left: 0;
+            padding-top: 2.76vw;
+            position: static;
+            font-size: 1.87vw;
+            @include mq() {
+                font-size: 2.39vw;
+            }
+            @include mq(sm) {
+                font-size: 5.33vw;
+            }
+        }
     }
     &__sub-ttl {
         font-size: 1.25vw;

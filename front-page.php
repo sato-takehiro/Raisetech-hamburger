@@ -1,6 +1,6 @@
 <?php get_header(); //header.phpを読み込むテンプレートタグ（インクルードタグ）?>
             <section class="p-hero p-hero--front">
-                <h1 class="c-ttl u-fs-40 u-fs-md-36">ダミーサイト</h1>      
+                <h1 class="c-ttl u-fs-40 u-fs-md-36">ダミーサイトfront-page</h1>      
             </section>
             <div class="p-card__wrapper l-contents">
                 <section class="p-card p-card--take-out">
