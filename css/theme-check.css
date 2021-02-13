@@ -1,0 +1,101 @@
+@charset "UTF-8";
+/*.wp-caption,.wp-caption-text*/
+.wp-caption, .wp-caption-text {
+  font-size: 90%;
+}
+
+.alignleft {
+  /*左寄せ*/
+  text-align: left;
+}
+
+.alignright {
+  /*右寄せ*/
+  text-align: right;
+}
+
+.aligncenter {
+  /*中央寄せ*/
+  text-align: center;
+}
+
+.gallery {
+  /** ギャラリーを囲むボックス **/
+  width: 100%;
+  margin-bottom: 20px !important;
+  overflow: hidden;
+}
+
+/*ギャラリー*/
+.gallery br {
+  display: none;
+}
+
+/** 自動で挿入される clearfix の余白解除 **/
+.gallery-item {
+  /** 画像共通のスタイル **/
+  float: left;
+  margin-bottom: 0 !important;
+}
+
+.gallery-icon {
+  /** 画像を囲む dt のスタイル **/
+  text-align: center;
+}
+
+.gallery-icon img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px !important;
+}
+
+.gallery-caption {
+  /** キャプション **/
+  color: #222;
+  font-size: 12px;
+  margin: 0 0 10px;
+  text-align: center;
+}
+
+.gallery-columns-1 .gallery-item {
+  /** カラムなし **/
+  width: 100%;
+  margin-right: 0;
+}
+
+.gallery-columns-2 .gallery-item {
+  /** 2カラム **/
+  width: 48%;
+  margin: 0 1%;
+}
+
+.gallery-columns-3 .gallery-item {
+  /** 3カラム **/
+  width: 31.33333%;
+  margin: 0 1%;
+}
+
+.gallery-columns-4 .gallery-item {
+  /** 4カラム **/
+  width: 23%;
+  margin: 0 1%;
+}
+
+.gallery-columns-5 .gallery-item {
+  /** 5カラム **/
+  width: 18%;
+  margin: 0 1%;
+}
+
+@media screen and (max-width: 640px) {
+  /* 640px以下用の記述 */
+  .gallery-columns-3 .gallery-item, .gallery-columns-4 .gallery-item {
+    width: 48%;
+    margin: 0 1%;
+  }
+  .gallery-columns-5 .gallery-item {
+    width: 31.33333%;
+    margin: 0 1%;
+  }
+}
+/*# sourceMappingURL=theme-check.css.map */

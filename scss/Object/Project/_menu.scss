@@ -10,7 +10,7 @@
     @include mq(sm) {
         display: block;
         height: $menu-responsive-sm-height;				
-        margin-bottom: 5.6vw;
+        margin-bottom: 80vw;
     }
     
     &__img {
@@ -26,7 +26,7 @@
     &__contents {
         background-color: $menu-bg-color;
         color: $font-color-brand;
-        width: 50%;
+        width: 100%;
         padding-left: 3.28vw;
         position: relative;
         @include mq() {
@@ -68,6 +68,7 @@
                 font-size: 2.39vw;
             }
             @include mq(sm) {
+                padding-top: 7vw;
                 font-size: 5.33vw;
             }
         }
@@ -81,6 +82,7 @@
                 font-size: 2.39vw;
             }
             @include mq(sm) {
+                padding-top: 7vw;
                 font-size: 5.33vw;
             }
         }

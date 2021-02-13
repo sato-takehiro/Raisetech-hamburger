@@ -74,8 +74,8 @@
     
         return $title;
     }
-  
-  add_filter( 'get_the_archive_title', 'whitesnow_get_the_archive_title' );
+    
+    add_filter( 'get_the_archive_title', 'whitesnow_get_the_archive_title' );
 
     //Custom CSS Widget
     add_action( 'admin_menu', 'custom_css_hooks' );
@@ -104,11 +104,6 @@
         rewind_posts();
         }
     }
-    //エディタのスタイルをテーマのスタイルにする
-    function hamburger_theme_add_editor_styles() {
-        add_editor_style( get_template_directory_uri() . "/css/editor-style.css" );
-    }
-    add_action( 'admin_init', 'hamburger_theme_add_editor_styles' );
     //検索結果のテンプレートを複数用意するための設定
     add_filter('template_include','custom_search_template');
     function custom_search_template($template){
