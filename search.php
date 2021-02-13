@@ -1,24 +1,34 @@
 <?php get_header(); //header.phpを読み込むテンプレートタグ（インクルードタグ）?>
             <section class="p-hero p-hero--archive">
-                <h1 class="c-ttl">Search:<span>チーズバーガーarchive-search</span></h1>      
+                <?php 
+                if (isset($_GET['s']) && empty($_GET['s'])) {
+                    echo '<h1 class="c-ttl">Search:<span>検索キーワード未入力</span></h1>';  
+                } else {
+                    echo '<h1 class="c-ttl">Search:<span>'.$_GET['s'] .'</span></h1>';
+                }
+                ?>      
             </section>
             <section class="p-summary l-contents">
                 <h2 class="p-summary__ttl">見出しが入ります</h2>
-                <p class="p-summary__description">このページはarchibe-searchページです。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                <p class="p-summary__description">このページはarchibe-searchページです。このページはarchibe-searchページです。このページはarchibe-searchページです。このページはarchibe-searchページです。このページはarchibe-searchページです。このページはarchibe-searchページです。このページはarchibe-searchページです。このページはarchibe-searchページです。このページはarchibe-searchページです。このページはarchibe-searchページです。このページはarchibe-searchページです。このページはarchibe-searchページです。このページはarchibe-searchページです。このページはarchibe-searchページです。</p>
             </section>
             <?php
                 if( have_posts() ) :
                     while( have_posts() ) :
                         the_post(); ?>
-                        <section class="p-menu l-contents" id="post-<?php the_ID(); //投稿ID?>" <?php post_class(); //生成するページによってclassを付与する?>>
-                            <picture class="p-menu__img">
-                                <?php the_post_thumbnail() //設定されているときはアイキャッチ画像を表示?>
-                                <source media="(min-width: 960px)" srcset="<?php echo get_template_directory_uri(); ?>/img/menu_img.png">
-                                <source media="(min-width: 560px)" srcset="<?php echo get_template_directory_uri(); ?>/img/menu_img-md.png">
-                                <img src="<?php echo get_template_directory_uri(); ?>/img/menu_img-sm.png">
-                            </picture>
+                        <section <?php post_class('p-menu l-contents'); //自動でクラスを割り当てる?> id="post-<?php the_ID(); //投稿ID?>" <?php post_class(); //生成するページによってclassを付与する?>>
+                            <?php if( has_post_thumbnail() ) : ?>
+                                <?php the_post_thumbnail('thumbnail',array('class' => 'p-menu__img')) //設定されているときはアイキャッチ画像を表示?>
+                            <?php else: //サムネイルが設定されていなければデフォルト画像を表示する?>
+                                <picture class="p-menu__img">
+                                    <source media="(min-width: 960px)" srcset="<?php echo get_template_directory_uri(); ?>/img/menu_img.png">
+                                    <source media="(min-width: 560px)" srcset="<?php echo get_template_directory_uri(); ?>/img/menu_img-md.png">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/img/menu_img-sm.png">
+                                </picture>
+                            <?php endif; ?>
                             <div class="p-menu__contents">
-                            <?php
+                                <h3 class="p-menu__ttl  p-menu__ttl--search"><?php the_title(); //投稿タイトルを表示?></h3>
+                                    <?php
                                     $content_string = get_the_content('詳しく見る');//投稿本文の一部のプレビュー、引数で「さらに...」を「詳しく見る」に置き換える 
                                     $content_string = str_replace('<p','<p class=".p-menu__description." ',$content_string);
                                     $content_string = str_replace('<h1','<h1 class="p-menu__description" ',$content_string);
@@ -44,7 +54,7 @@
                     the_posts_pagination($args); //ページネーションを表示する?>
                 <?php else ://記事がなかったときの表示内容?>
                     <p class="l-contents">表示する記事がありません</p>
-                <?php endif;?>
+                <?php endif; ?>
         </div>
         <?php get_sidebar(); //siderbar.phpを読み込むテンプレートタグ（インクルードタグ）?>
     </div>

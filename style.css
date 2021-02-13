@@ -428,7 +428,7 @@ input {
 @media screen and (max-width: 559px) {
   .p-hero--archive {
     height: 75.46vw;
-    padding-eft: 9.86vw;
+    padding-left: 9.86vw;
   }
 }
 
