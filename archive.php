@@ -1,10 +1,12 @@
 <?php get_header(); //header.phpを読み込むテンプレートタグ（インクルードタグ）?>
             <section class="p-hero p-hero--archive">
-                <h1 class="c-ttl">Menu:<span>チーズバーガー</span></h1>      
+                <?php 
+                the_archive_title( '<h1 class="c-ttl">Menu:<span>', '</span></h1>' ); ?>      
             </section>
             <section class="p-summary l-contents">
-                <h2 class="p-summary__ttl">小見出しが入りますarchive</h2>
-                <p class="p-summary__description">このページはarchiveページです。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+            <?php 
+                the_archive_title( '<h2 class="p-summary__ttl">', 'とは</h2>' ); ?>
+                <p class="p-summary__description"><?php the_archive_description(); ?></p>
             </section>
             <?php
                 if( have_posts() ) :

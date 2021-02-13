@@ -60,6 +60,23 @@
       }
     add_action( 'widgets_init', 'hamberger_widgets_init' );
 
+    /*
+    * Filter the archive title to remove the label of the title.
+    */
+    function whitesnow_get_the_archive_title( $title ) {
+        if ( is_category() ) {
+        $title = single_cat_title( '', false );
+        } elseif ( is_tag() ) {
+        $title = single_tag_title( '', false );
+        } elseif ( is_month() ) {
+        $title = get_the_date( 'Y年n月' );
+        }
+    
+        return $title;
+    }
+  
+  add_filter( 'get_the_archive_title', 'whitesnow_get_the_archive_title' );
+
     //Custom CSS Widget
     add_action( 'admin_menu', 'custom_css_hooks' );
     add_action( 'save_post', 'save_custom_css' );
