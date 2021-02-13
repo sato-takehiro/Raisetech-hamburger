@@ -8,6 +8,5 @@
                 <p><a href="<?php echo home_url( '/' ) ?>">ホームに戻る</a></p>
             </section>    
         </div>
-        <?php get_sidebar(); //siderbar.phpを読み込むテンプレートタグ（インクルードタグ）?>
     </div>
 <?php get_footer(); //footer.phpを読み込むテンプレートタグ（インクルードタグ）?>
