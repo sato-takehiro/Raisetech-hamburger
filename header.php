@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body <?php body_class(); //現在のページに応じて自動でクラスを割り当てる関数?>>
+    <?php wp_body_open(); //Body開始タグ直後にコードを追加する ?>
     <div class="l-sidebar__wrapper">
         <div class="l-sidebar__opponent">
             <header class="l-header">

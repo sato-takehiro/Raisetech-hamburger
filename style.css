@@ -1,20 +1,20 @@
+@charset "UTF-8";
 /*
-Theme Name: HAMBURGER
-Description: Raisetech課題用テーマ
-Version: 1.0.0
+Theme Name: hamburger
 Theme URI: https://github.com/sato-takehiro/hamburger
 Author: Sato Takehiro
 Author URI: https://github.com/sato-takehiro
-Tags: right-sidebar,food-and-drink
+Description: Raisetech課題用テーマ
+Tested up to: 5.6.1
+Requires PHP: 7.3.5
+Version: 1.0.0
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: hamburger
-Tested up to: 5.6.1
-Requires PHP: 7.3.5
+Tags: right-sidebar, food-and-drink
 */
 
 
-@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)

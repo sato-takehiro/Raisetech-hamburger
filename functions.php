@@ -1,7 +1,8 @@
 <?php
     //テーマサポート
-    add_theme_support( 'menus' );//メニューのサポートを許可
+    register_nav_menus(); //メニューのサポートを許可
     add_theme_support('title-tag');//タイトルタグのサポートを許可
+    add_theme_support( 'custom-background' ); //カスタム背景機能をサポートを許可
     //タイトル出力
     function hamburger_title( $title ) {
         if ( is_front_page() && is_home() ) { //トップページなら
@@ -12,7 +13,18 @@
             return $title;
         }
     add_filter( 'pre_get_document_title', 'hamburger_title' );
-    
+
+    //テーマのテキストドメインを指定する
+    if ( ! function_exists('hamburger_setup') ) {
+        add_action( 'after_setup_theme', 'hamburger_setup' );
+        function hamburger_setup(){
+            load_theme_textdomain( 'hamburger', get_template_directory() . '/languages' );
+        }
+    }
+
+    //自分のスタイルシートファイルを クラッシックエディターへスタイリング
+    add_editor_style('style.css');
+
     //CSS や JavaScript の読込
     function hamburger_script() {
         wp_enqueue_style( 'fontawesome', 'https://use.fontawesome.com/releases/v5.6.1/css/all.css', array(), '5.6.1');
@@ -48,9 +60,9 @@
     function hamberger_widgets_init() {
         // Register main sidebar
         register_sidebar( array(
-          'name'          => 'Main Sidebar',//サイドバーの名前
+          'name'          => __('Main Sidebar', 'hamburger' ),//サイドバーの名前
           'id'            => 'sidebar-main',//サイドバーのID
-          'description'   => 'Add widgets you want to display in sidebar.',//サイドバーの説明文
+          'description'   => __('Add widgets you want to display in sidebar.', 'hamburger'),//サイドバーの説明文
           'before_widget' => '<section id="%1$s" class="widget %2$s">',//ウィジットの前に表示する文字列
           'after_widget'  => '</section>',//ウィジットの後に表示する文字列
           'before_title'  => '<h5 class="widget-title">',//ウィジットのタイトルの前に表示する文字列
