@@ -20,7 +20,6 @@
         wp_enqueue_style('googlemap', 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap', array());
         wp_enqueue_style('style', get_template_directory_uri() . '/style.css', array(), '1.0.0');
         wp_enqueue_style('hamburger', get_template_directory_uri() . '/css/hamburger.css', array(), '1.0.0');
-        wp_enqueue_script('jQuery', 'https://code.jquery.com/jquery-3.5.1.min.js', array(), '3.5.1', true);
         wp_enqueue_script('sidebar-script', get_template_directory_uri() . '/js/sidebar.js', array(), '1.0.0', true);
         if ( is_single()) : //投稿ページかつpostクラスがあるときにjsファイルを読み込む
             wp_enqueue_script('single-script', get_template_directory_uri() . '/js/single.js', array(), '1.0.0', true);
@@ -74,8 +73,29 @@
     
         return $title;
     }
-    
     add_filter( 'get_the_archive_title', 'whitesnow_get_the_archive_title' );
+
+    //検索結果のテンプレートを複数用意するための設定
+    add_filter('template_include','custom_search_template');
+    function custom_search_template($template){
+    if ( is_search() ){
+        $post_types = get_query_var('post_type');
+        foreach ( (array) $post_types as $post_type )
+        $templates[] = "search-{$post_type}.php";
+        $templates[] = 'search.php';
+        $template = get_query_template('search',$templates);
+    }
+    return $template;
+    }
+
+    //body開始タグのすぐあとにソースコードを挿入するための設定
+    add_action( 'wp_body_open', function() {
+        ?>
+        <!--ここから挿入したいソースコードを記入-->
+        
+        <!--ここまで挿入したいソースコードを記入-->
+        <?php
+    });
 
     //Custom CSS Widget
     add_action( 'admin_menu', 'custom_css_hooks' );
@@ -104,19 +124,6 @@
         rewind_posts();
         }
     }
-    //検索結果のテンプレートを複数用意するための設定
-    add_filter('template_include','custom_search_template');
-    function custom_search_template($template){
-    if ( is_search() ){
-        $post_types = get_query_var('post_type');
-        foreach ( (array) $post_types as $post_type )
-        $templates[] = "search-{$post_type}.php";
-        $templates[] = 'search.php';
-        $template = get_query_template('search',$templates);
-    }
-    return $template;
-    }
-
     //Custom JS Widget
     add_action( 'admin_menu', 'custom_js_hooks' );
     add_action( 'save_post', 'save_custom_js' );

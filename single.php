@@ -8,9 +8,9 @@
                             <?php the_post_thumbnail('thumbnail',array('class' => 'p-menu__img'));//設定されているときはアイキャッチ画像を表示 ?>
                         <?php else : //サムネイルが設定されていなければデフォルト画像を表示する?>
                             <picture class="p-menu__img">
-                                <source media="(min-width: 960px)" srcset="<?php echo get_template_directory_uri(); ?>/img/menu_img.png">
-                                <source media="(min-width: 560px)" srcset="<?php echo get_template_directory_uri(); ?>/img/menu_img-md.png">
-                                <img src="<?php echo get_template_directory_uri(); ?>/img/menu_img-sm.png">
+                                <source media="(min-width: 960px)" srcset="<?php echo esc_url( get_template_directory_uri() ); ?>/img/menu_img.png">
+                                <source media="(min-width: 560px)" srcset="<?php echo esc_url( get_template_directory_uri() ); ?>/img/menu_img-md.png">
+                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/menu_img-sm.png">
                             </picture>
                         <?php endif; ?>
                         <h1 class="p-menu__ttl p-menu__ttl--single"><?php the_title(); //投稿タイトルを表示?></h1>

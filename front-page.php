@@ -5,7 +5,7 @@
             <div class="p-card__wrapper l-contents">
                 <section class="p-card p-card--take-out">
                     <a href="<?php echo get_tag_link(12); ?>">
-                        <h2 class="p-card__ttl">Take Out</h2>
+                        <h2 class="p-card__ttl"><?php echo get_term_by('id', 12, 'post_tag')->name; ?></h2>
                         <div class="p-card__description">
                             <div class="p-card__sub-wrapper">
                                 <h3 class="p-card__sub-ttl">
@@ -28,7 +28,7 @@
                 </section><!-- /.p-card -->
                 <section class="p-card p-card--eat-in">
                     <a href="<?php echo get_tag_link(13); ?>">
-                        <h2 class="p-card__ttl">Eat In</h2>
+                        <h2 class="p-card__ttl"><?php echo get_term_by('id', 13, 'post_tag')->name; ?></h2>
                         <div class="p-card__description">
                             <div class="p-card__sub-wrapper">
                                 <h3 class="p-card__sub-ttl">
